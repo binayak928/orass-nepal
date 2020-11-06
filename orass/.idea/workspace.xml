@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/orass.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/0002_create_homepage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/css/welcome_page.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/home_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/home/welcome_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/settings/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/settings/base.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/settings/dev.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/settings/production.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/static/css/orass.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/static/js/orass.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/templates/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/templates/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/orass/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orass/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/orass/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/templates/search/search.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/search/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../requirements.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JupyterTrust" id="44af501a-65d2-4f53-8fb7-67b280a43974" />
+  <component name="ProjectId" id="1julpZmH2Vc9Ez81nETRPjJoF1W" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="orass" type="Python.DjangoServer" factoryName="Django server">
+      <module name="orass" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="" />
+      <created>1604662040505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604662040505</updated>
+      <workItem from="1604662042104" duration="43000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
