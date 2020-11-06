@@ -10,3 +10,13 @@ from django.views.decorators.csrf import csrf_exempt
 def home_page(request):
     context = {}
     return render(request, 'web/base.html', context)
+
+
+def test_page(request):
+    context = {}
+    return render(request, 'web/test.html', context)
+
+
+def contact_page(request):
+    context = {}
+    return render(request, 'web/contact.html', context)
