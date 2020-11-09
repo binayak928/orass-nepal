@@ -75,7 +75,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-2.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
+                            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-2.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="right-column">
@@ -90,9 +90,9 @@
                                             <li class="dropdown current"><a href="{% url 'web:home' %}">Home</a></li>
                                             <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
-                                                    <li><a href="about.html">About Us</a></li>
-                                                    <li><a href="faq.html">FAQ’s</a></li>
-                                                    <li><a href="team.html">Meet Our Team</a></li>
+                                                    <li><a href="{% url 'web:about' %}">About Us</a></li>
+                                                    <li><a href="{% url 'web:faq' %}">FAQ’s</a></li>
+                                                    <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
                                             </li>
@@ -146,7 +146,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
+                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="menu-column">

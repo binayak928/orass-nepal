@@ -20,12 +20,12 @@
 <!-- Stylesheets -->
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/swiper.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
     <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
     <link href="{% static 'css/animate.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom-animate.css' %}" rel="stylesheet">
-    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/owl.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -91,7 +91,7 @@
                                             <li><a href="{% url 'web:home' %}">Home</a></li>
                                             <li class="dropdown current"><a href="#">Pages</a>
                                                 <ul>
-                                                    <li><a href="{% url 'web:about' %}">About Us</a></li>
+                                                    <li><a href="{% url 'web:about'%}">About Us</a></li>
                                                     <li><a href="{% url 'web:faq' %}">FAQ’s</a></li>
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
@@ -156,11 +156,11 @@
                             <div class="nav-inner">
 
                                 <!-- Main Menu -->
+                            </ul>
                                 <nav class="main-menu navbar-expand-xl navbar-dark">
 
                                     <div class="collapse navbar-collapse">
                                         <ul class="navigation">
-                                        </ul>
                                     </div>
                                 </nav><!-- Main Menu End-->
 
@@ -174,7 +174,7 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu style-two">
             <div class="menu-box">
-                <div class="logo"><a href="#"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
+                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 120px; height: 40px;"></a></div>
                 <!-- Main Menu -->
                 <nav class="main-menu navbar-expand-xl navbar-dark">
                     <div class="navbar-header">
@@ -263,58 +263,225 @@
     <section class="page-title" style="background-image:url({% static 'images/background/bg-13.jpg' %})">
         <div class="auto-container">
             <div class="content-box">
-                <h1 style="margin-top: 50px;">See Who have Trusted Us</h1>
+                <h1 style="margin-top:50px;">Frequently Asked Questions</h1>
                 <ul class="bread-crumb">
                     <li><a class="home" href="{% url 'web:home' %}"><span class="fa fa-home"></span></a></li>
-                    <li>Donors</li>
+                    <li>FAQ's</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="card shadow mb-4">
-          <div class="card-header py-3">
-            <h4 class="m-0 font-weight-bold text-primary" style="text-align: center">Donor &nbsp Details</h4>
-          </div>
-          <div class="card-body">
-            <div class="table-responsive">
-              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                <thead>
-                  <tr>
-                    <th style="text-align: center">Name </th>
-                    <th style="text-align: center">Date</th>
-                    <th style="text-align: center">Amount</th>
-                  </tr>
-                </thead>
-<!--                <tfoot>-->
-<!--                  <tr>-->
-<!--                    <th>ID</th>-->
-<!--                    <th>First Name </th>-->
-<!--                    <th>Last Name </th>-->
-<!--                    <th>Gender </th>-->
-<!--                    <th>DoB</th>-->
-<!--                    <th>Contact Number</th>-->
-<!--                    <th>City</th>-->
-<!--                  </tr>-->
-<!--                </tfoot>-->
-                <tbody>
-                  {% for donor in donations %}
-                    <tr style="text-align: center">
-                      <td>{{ donor.name }}</td>
-                      <td>{{ donor.date }}</td>
-                      <td>{{ donor.amt }}</td>
-                    </tr>
-                  {% endfor %}
-
-                </tbody>
-              </table>
+    <!--Faq section-->
+    <section class="faq-section">
+        <div class="auto-container">
+            <div class="faq-content-box">
+                <div class="accordion-box">
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><span class="count"></span><h4>How have you selected your top charities?</h4></div>
+                        <div class="accord-content">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block active">
+                        <div class="accord-btn"><span class="count"></span><h4>How can I find out where my forfeited charity money went?</h4></div>
+                        <div class="accord-content collapsed">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><span class="count"></span><h4>What is an Anti-charity?</h4></div>
+                        <div class="accord-content">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><span class="count"></span><h4>Are donations to your recommended charities tax deductible?</h4></div>
+                        <div class="accord-content">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><span class="count"></span><h4>Do all the charities on your list actually save lives?</h4></div>
+                        <div class="accord-content">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                    <!--Start single accordion box-->
+                    <div class="accordion accordion-block">
+                        <div class="accord-btn"><span class="count"></span><h4>Doesn't the government already give plenty of foreign aid?</h4></div>
+                        <div class="accord-content">
+                            <div class="text">We denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue.</div>
+                        </div>
+                    </div>
+                    <!--End single accordion box-->
+                </div>    
             </div>
-          </div>
         </div>
     </section>
 
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <div class="auto-container">
+            <div class="widget-wrapper">
+                <div class="row">
+                    <!-- Contact Widget -->
+                    <div class="col-lg-3 col-md-6 contact-widget footer-widget">
+                        <h4 class="widget-title">Contact</h4>
+                        <ul>
+                            <li>5404 Berrick Street, <br> 2nd cross, <br>Boston, MA 02115.</li>
+                            <li><a href="mailto:support@goodsoul.com">supportyou@goodsoul.com </a></li>
+                        </ul>   
+                        <h3><a href="tel:+211456789">+211 456 789</a></h3>                 
+                    </div>
+                    <!-- About Widget -->
+                    <div class="col-lg-3 col-md-6 about-widget footer-widget">
+                        <h4 class="widget-title">About</h4>
+                        <ul>
+                            <li><a href="#">Charity</a></li>
+                            <li><a href="#">Volunteers</a></li>
+                            <li><a href="#">Upcoming Events</a></li>
+                            <li><a href="#">Trending News</a></li>
+                            <li><a href="#">Causes</a></li>
+                        </ul>                
+                    </div>
+                    <!-- Link Widget -->
+                    <div class="col-lg-3 col-md-6 link-widget footer-widget">
+                        <h4 class="widget-title">Quick Link</h4>
+                        <ul>
+                            <li><a href="#">Private Policies</a></li>
+                            <li><a href="#">Donate Now</a></li>
+                            <li><a href="#">Become a Volunteer</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>               
+                    </div>
+                    <!-- Newsletter Widget -->
+                    <div class="col-lg-3 col-md-6 newsletter-widget footer-widget">
+                        <h4 class="widget-title">Newsletter</h4>
+                        <div class="text">Subscribe us and get latest news & <br>upcoming events.</div>
+                        <form action="#">
+                            <input type="email" placeholder="Emial Address...">
+                            <button class="submin-btn"><span class="flaticon-next"></span>Subscribe Us</button>
+                        </form>
+                    </div>
+                </div>
+            </div>                
+            <div class="footer-bottom">
+                <div class="left-content">
+                    <div class="icon"><img src="images/resource/logo-icon.png" alt=""></div>
+                    <div class="copyright-text"><a href="templateshub.net">Templateshub</a><a href="#">Goodsoul.</a> <br>Designed By <a href="#">Themekalia.</a></div>
+                </div>
+                <div class="right-content">
+                    <ul class="social-icon-three">
+                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon flaticon-arrow"></span></div>
+
+    <div id="donate-popup" class="donate-popup">
+        
+        <div class="popup-overlay"></div>
+
+        <div class="donate-form-area">
+            <div class="donate-form-wrapper">
+                <div class="close-donate theme-btn"><span class="flaticon-close"></span></div>
+                <div class="sec-title text-center">
+                    <h1>Donate us to achive our goal</h1>
+                    <div class="text">Beguiled and demoralized by the charms of pleasure of the moment, so by desire, <br>that they cannot foresee.</div>
+                </div>
+
+                <form  action="#" class="donate-form default-form">
+                    <ul class="chicklet-list clearfix">
+                        <li>
+                            <input type="radio" id="donate-amount-1" name="donate-amount" />
+                            <label for="donate-amount-1" data-amount="10" >$10</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="donate-amount-2" name="donate-amount" checked="checked" />
+                            <label for="donate-amount-2" data-amount="20">$20</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="donate-amount-3" name="donate-amount" />
+                            <label for="donate-amount-3" data-amount="50">$50</label>
+                        </li>
+                        <li>
+                            <input type="radio" id="donate-amount-4" name="donate-amount" />
+                            <label for="donate-amount-4" data-amount="100">$100</label>
+                        </li>
+                        <li class="other-amount">
+                            <div class="input-container" data-message="Every dollar you donate helps end hunger."><input type="text" id="other-amount" placeholder="Other Amount"  />
+                            </div>
+                        </li>
+                    </ul>
+
+                    <h3>Donor Information</h3>
+
+                    <div class="contact-form">
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" name="fname" placeholder="Full Name">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" name="fname" placeholder="Email Address">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <input type="text" name="fname" placeholder="Contact">
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group">
+                                    <select class="filters-selec form-controlt selectmenu" name="form_subject">
+                                        <option value="*">Payment Via</option>
+                                        <option value=".category-1">Cash</option>
+                                        <option value=".category-2">Card</option>
+                                        <option value=".category-2">Bank Transfer</option>
+                                        <option value=".category-2">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group d-flex align-items-center justify-content-between">
+                                    <button class="theme-btn btn-style-one" type="submit"><span>Donate Now</span></button>
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span>I would like to donate automatically repeat each month</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+                
+        </div>
+    </div>
 
 </div>
 <!--End pagewrapper-->

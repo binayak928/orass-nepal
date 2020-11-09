@@ -33,6 +33,20 @@ def donor_page(request):
     return render(request, 'web/donor.html', context)
 
 
+def faq_page(request):
+    context={}
+    return render(request, 'web/faq.html', context)
+
+
+def about_page(request):
+    context={}
+    return render(request,'web/aboutus.html',context)
+
+
+def team_page(request):
+    context={}
+    return render(request,'web/team.html',context)
+
 class Login(auth_views.LoginView):
     template_name = 'registration/login_page.html'
 
@@ -41,3 +55,5 @@ class Login(auth_views.LoginView):
 def staff_home(request):
     context = {}
     return render(request, 'staff/index.html', context)
+
+
