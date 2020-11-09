@@ -14,7 +14,7 @@ urlpatterns = [
     path('contact/', views.contact_page, name='contact'),
     path('donor/', views.donor_page, name='donor'),
 
-    path('staff/', Login.as_view(), name='login'),
+    path('staff/', Login.as_view(), name='staff'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('staff/dashboard/', views.staff_home, name='dashboard'),
 ]

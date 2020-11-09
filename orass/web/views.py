@@ -34,7 +34,7 @@ def donor_page(request):
 
 
 class Login(auth_views.LoginView):
-    template_name = 'staff/login.html'
+    template_name = 'registration/login_page.html'
 
 
 @login_required(login_url="/staff")

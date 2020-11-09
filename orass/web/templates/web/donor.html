@@ -62,15 +62,8 @@
                             <li><span class="flaticon-mail"></span><a href="mailto:support@charity.com">support@orassnepal.com</a></li>
                             <li><span class="flaticon-phone"></span><a href="tel:+9779869209306">+977 986 920 9306</a></li>
                         </ul>
-                        <div class="language-switcher">
-                            <div class="languages">
-                                <span class="current" title="English">En</span>
-                                <span class="hover">English</span>
-                                <ul>
-                                <li><a href="#">English</a></li>
-                                    <li><a href="#">Nepali</a></li>
-                                </ul>
-                            </div>
+                        <div>
+                            <li style="color: #febf10;"><a href="{% url 'web:staff' %}">Login</a></li>
                         </div>
                     </div>
                 </div>
@@ -83,7 +76,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-2.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
+                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-2.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="right-column">
@@ -95,40 +88,16 @@
 
                                     <div class="collapse navbar-collapse">
                                         <ul class="navigation">
-                                            <li class="dropdown current"><a href="index-2.html">Home</a>
-                                                <ul>
-                                                    <li><a href="index-2.html">Main Home</a></li>
-                                                    <li><a href="index-3.html">Volunteer Home</a></li>
-                                                    <li><a href="index-4.html">Charity Home</a></li>
-                                                    <li><a href="index-5.html">Ecology Home</a></li>
-                                                    <li><a href="index-6.html">Education Home</a></li>
-                                                </ul>
-                                            </li>
-                                            <li class="dropdown"><a href="#">Pages</a>
+                                            <li><a href="{% url 'web:home' %}">Home</a></li>
+                                            <li class="dropdown current"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="about.html">About Us</a></li>
                                                     <li><a href="faq.html">FAQ’s</a></li>
                                                     <li><a href="team.html">Meet Our Team</a></li>
-                                                    <li class="dropdown"><a href="#">Portfolio</a>
-                                                        <ul>
-                                                            <li><a href="portfolio-1.html">Style 01 - Grid View</a></li>
-                                                            <li><a href="portfolio-2.html">Style 02 - Grid View</a></li>
-                                                            <li><a href="portfolio-3.html">Style 01 - Masonry View</a></li>
-                                                            <li><a href="portfolio-4.html">Style 02 - Masonry View</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="dropdown"><a href="#">Shop</a>
-                                                        <ul>
-                                                            <li><a href="shop.html">Our Products</a></li>
-                                                            <li><a href="shop-single.html">Products Single</a></li>
-                                                            <li><a href="shopping-cart.html">Shopping Cart</a></li>
-                                                            <li><a href="checkout.html">Checkout</a></li>
-                                                            <li><a href="account.html">My Account</a></li>
-                                                        </ul>
-                                                    </li>
+                                                    <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Causes</a>
+                                            <li class="dropdown"><a href="#">Project</a>
                                                 <ul>
                                                     <li><a href="causes-1.html">Style 01 - Grid View</a></li>
                                                     <li><a href="causes-2.html">Style 02 - List View</a></li>
@@ -178,7 +147,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
+                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 140px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="menu-column">
@@ -205,7 +174,7 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu style-two">
             <div class="menu-box">
-                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
+                <div class="logo"><a href="#"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
                 <!-- Main Menu -->
                 <nav class="main-menu navbar-expand-xl navbar-dark">
                     <div class="navbar-header">
@@ -256,7 +225,7 @@
     <section class="hidden-sidebar style-two close-sidebar">
         <div class="wrapper-box">
             <div class="hidden-sidebar-close"><span class="flaticon-cross"></span></div>
-            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
+            <div class="logo"><a href="#"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
             <div class="content">
                 <div class="about-widget-four sidebar-widget">
                     <h3>To improve learning environment in primary schools</h3>
