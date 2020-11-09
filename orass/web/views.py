@@ -37,7 +37,7 @@ class Login(auth_views.LoginView):
     template_name = 'staff/login.html'
 
 
-@login_required(login_url="/admin")
+@login_required(login_url="/staff")
 def staff_home(request):
     context = {}
     return render(request, 'staff/index.html', context)
