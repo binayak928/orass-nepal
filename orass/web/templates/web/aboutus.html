@@ -59,8 +59,8 @@
                     </div>
                     <div class="right-content">
                         <ul class="contact-info">
-                            <li><span class="flaticon-mail"></span><a href="mailto:support@charity.com">support@orassnepal.com</a></li>
-                            <li><span class="flaticon-phone"></span><a href="tel:+9779869209306">+977 986 920 9306</a></li>
+                            <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
+                            <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
                         <div>
                             <li style="color: #febf10;"><a href="{% url 'web:staff' %}">Login</a></li>
@@ -111,13 +111,8 @@
                                                     <li><a href="event-details.html">Single Event</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Blog</a>
-                                                <ul>
-                                                    <li><a href="blog.html">Classic Grid View</a></li>
-                                                    <li><a href="blog-fullwidth.html">Fullwidth Masonry</a></li>
-                                                    <li><a href="blog-list.html">List With Sidebar</a></li>
-                                                    <li><a href="blog-details.html">Single Post</a></li>
-                                                </ul>
+                                            <li><a href="{% url 'web:blog' %}">Blog</a>
+                                                
                                             </li>
                                             <li><a href="{% url 'web:contact' %}">Contact</a></li>
                                         </ul>
@@ -174,7 +169,7 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu style-two">
             <div class="menu-box">
-                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 120px; height: 40px;"></a></div>
+                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 100px; height: 40px;"></a></div>
                 <!-- Main Menu -->
                 <nav class="main-menu navbar-expand-xl navbar-dark">
                     <div class="navbar-header">
@@ -461,7 +456,7 @@
                         <div class="contact-info-two">
                             <h5>Need assitant for <br>join with us?</h5>
                             <div class="icon-box"><span class="flaticon-phone-1"></span></div>
-                            <div class="phone-number"><a href="tel:+2114567890">+211 456 7890</a></div>
+                            <div class="phone-number"><a href="tel:+9779841258298">+977 984 125 8298</a></div>
                         </div>
                         <div class="logo-box"><div class="image wow zoomIn" data-wow-delay="500ms"><img src="images/resource/logo-icon.png" alt=""></div></div>
                         <div class="video-box"><img src="images/resource/image-19.jpg" alt=""><a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link lightbox-image video-fancybox video-btn"><span class="flaticon-multimedia-1"></span></a></div>
@@ -486,7 +481,7 @@
                 <div class="image" data-toggle="tooltip" data-placement="top" title="media partner"><a href="#"><img src="images/clients/client-4.png" alt=""></a></div>
                 <div class="image" data-toggle="tooltip" data-placement="top" title="media partner"><a href="#"><img src="images/clients/client-5.png" alt=""></a></div>
             </div>
-            <div class="text-two text-center">To learn about becoming a partner, contact us at: <a href="mailto:support@goodsoul.com">support@goodsoul.com</a> or <a href="tel:+8889991234">1-888-999-1234</a></div>
+            <div class="text-two text-center">To learn about becoming a partner, contact us at: <a href="mailto:info@orassnepal.com">info@orassnepal.com</a> or <a href="tel:+9779841258298">+977 984 125 8298</a></div>
         </div>
     </section>
 
@@ -503,30 +498,27 @@
                         <h4 class="widget-title">Contact</h4>
                         <ul>
                             <li>5404 Berrick Street, <br> 2nd cross, <br>Boston, MA 02115.</li>
-                            <li><a href="mailto:support@goodsoul.com">supportyou@goodsoul.com </a></li>
+                            <li><a href="mailto:support@orassnepal.com">support@orassnepal.com </a></li>
                         </ul>   
-                        <h3><a href="tel:+211456789">+211 456 789</a></h3>                 
+                        <h3><a href="tel:+9779841258298">+977 984 125 8298</a></h3>                 
                     </div>
                     <!-- About Widget -->
                     <div class="col-lg-3 col-md-6 about-widget footer-widget">
                         <h4 class="widget-title">About</h4>
                         <ul>
-                            <li><a href="#">Charity</a></li>
-                            <li><a href="#">Volunteers</a></li>
-                            <li><a href="#">Upcoming Events</a></li>
-                            <li><a href="#">Trending News</a></li>
-                            <li><a href="#">Causes</a></li>
+                            <li><a href="{% url 'web:donor' %}">Donors</a></li>
+                            <li><a href="{% url 'web:team' %}">Our Team</a></li>
+                            <li><a href="{% url 'web:blog' %}">Blogs</a></li>
+                            <li><a href="{% url 'web:project' %}">Projects</a></li>
                         </ul>                
                     </div>
                     <!-- Link Widget -->
                     <div class="col-lg-3 col-md-6 link-widget footer-widget">
                         <h4 class="widget-title">Quick Link</h4>
                         <ul>
-                            <li><a href="#">Private Policies</a></li>
                             <li><a href="#">Donate Now</a></li>
                             <li><a href="#">Become a Volunteer</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                         </ul>               
                     </div>
                     <!-- Newsletter Widget -->
@@ -543,14 +535,13 @@
             <div class="footer-bottom">
                 <div class="left-content">
                     <div class="icon"><img src="images/resource/logo-icon.png" alt=""></div>
-                    <div class="copyright-text"><a href="templateshub.net">Templateshub</a><a href="#">Goodsoul.</a> <br>Designed By <a href="#">Themekalia.</a></div>
+                    <div class="copyright-text"><br>Designed By <a href="#">Tushar Bohra | Prajun Lungeli Magar</a></div>
                 </div>
                 <div class="right-content">
                     <ul class="social-icon-three">
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href="https://www.facebook.com/orassnepal" target="_blank"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://twitter.com/orassnepal" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="https://www.instagram.com/orassnepal/" target="_blank"><span class="fa fa-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>

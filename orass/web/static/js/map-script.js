@@ -10,8 +10,9 @@ function GmapInit() {
       var Gmap = $('.map-canvas');
       Gmap.each(function() {
         var $this           = $(this),
-            lat             = '',
-            lng             = '',
+
+            lat             = '27.656184',
+            lng             = '85.327691',
             zoom            = 12,
             scrollwheel     = false,
             zoomcontrol     = true,

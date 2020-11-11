@@ -59,7 +59,7 @@
                     </div>
                     <div class="right-content">
                         <ul class="contact-info">
-                            <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
+                            <li><span class="flaticon-mail"></span><a href="mailto:support@orassnepal.com">support@orassnepal.com</a></li>
                             <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
                         <div>
@@ -89,7 +89,7 @@
                                     <div class="collapse navbar-collapse">
                                         <ul class="navigation">
                                             <li><a href="{% url 'web:home' %}">Home</a></li>
-                                            <li class="dropdown current"><a href="#">Pages</a>
+                                            <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="{% url 'web:about'%}">About Us</a></li>
                                                     <li><a href="{% url 'web:faq' %}">FAQ’s</a></li>
@@ -111,8 +111,7 @@
                                                     <li><a href="event-details.html">Single Event</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="{% url 'web:blog' %}">Blog</a>
-                                                
+                                            <li class='current'><a href="{% url 'web:blog' %}">Blog</a>
                                             </li>
                                             <li><a href="{% url 'web:contact' %}">Contact</a></li>
                                         </ul>
@@ -151,11 +150,11 @@
                             <div class="nav-inner">
 
                                 <!-- Main Menu -->
-                            </ul>
                                 <nav class="main-menu navbar-expand-xl navbar-dark">
 
                                     <div class="collapse navbar-collapse">
                                         <ul class="navigation">
+                                        </ul>
                                     </div>
                                 </nav><!-- Main Menu End-->
 
@@ -258,404 +257,208 @@
     <section class="page-title" style="background-image:url({% static 'images/background/bg-13.jpg' %})">
         <div class="auto-container">
             <div class="content-box">
-                <h1 style="margin-top:50px;">Meet our team</h1>
+                <h1 style="margin-top:50px;">Blog</h1>
                 <ul class="bread-crumb">
                     <li><a class="home" href="{% url 'web:home' %}"><span class="fa fa-home"></span></a></li>
-                    <li>Our Team</li>
+                    <li>Blog</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Team Section Three -->
-    <section class="team-section-three">
+    <!-- Blog Section -->
+    <section class="blog-section">
         <div class="auto-container">
             <div class="row">
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-1.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div>                                    
+                            <div class="category"><a href="#">Tips & Advice</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-5.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>21</a>
+                                <a href="#"><span class="flaticon-comment"></span>08</a>
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Benjie Alphonso</a></h4>
-                            <div class="designation">Founder</div>
+                            <div class="date"><span class="flaticon-clock"></span>Jul 14, 2019</div>
+                            <h4><a href="blog-details.html">Water is more essential</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Rubin Santro</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInDown" data-wow-delay="400ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-2.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                            <div class="category"><a href="#">Interviews</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-6.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>14</a>
+                                <a href="#"><span class="flaticon-comment"></span>05</a>
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Ivor Herbert</a></h4>
-                            <div class="designation">Head</div>
+                            <div class="date"><span class="flaticon-clock"></span>Jun 05, 2019</div>
+                            <h4><a href="blog-details.html">Coaching for fundraisers</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Carl Ronny</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-29.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                            <div class="category"><a href="#">Disaster</a><a href="#">Video</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-7.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>12</a>
+                                <a href="#"><span class="flaticon-comment"></span>02</a>
+                            </div>
+                            <div class="youtube-video-box"><a href="#"><span class="flaticon-logo"></span></a></div>
+                        </div>
+                        <div class="lower-content">
+                            <div class="date"><span class="flaticon-clock"></span>Mar 27, 2019</div>
+                            <h4><a href="blog-details.html">Aid for japan flood</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Gene Emery</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInDown" data-wow-delay="400ms">
+                        <div class="image">
+                            <div class="category"><a href="#">Interviews</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-8.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>14</a>
+                                <a href="#"><span class="flaticon-comment"></span>05</a>
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Benjie Alphonso</a></h4>
-                            <div class="designation">Support Staff</div>
+                            <div class="date"><span class="flaticon-clock"></span>Jun 05, 2019</div>
+                            <h4><a href="blog-details.html">Coaching for fundraisers</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-4.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Carl Ronny</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-13.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                            <div class="category"><a href="#">Disaster</a><a href="#">Video</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-9.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>12</a>
+                                <a href="#"><span class="flaticon-comment"></span>02</a>
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Merlin Judson</a></h4>
-                            <div class="designation">Manager</div>
+                            <div class="date"><span class="flaticon-clock"></span>Mar 27, 2019</div>
+                            <h4><a href="blog-details.html">Aid for japan flood</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Gene Emery</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                <!-- News Block Two -->
+                <div class="col-lg-4 col-md-6 news-block-two style-three">
+                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-14.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                            <div class="category"><a href="#">Tips & Advice</a></div>
+                            <a href="blog-details.html"><img src="images/resource/news-10.jpg" alt=""></a>
+                            <div class="post-meta-info">
+                                <a href="#"><span class="flaticon-eye"></span>21</a>
+                                <a href="#"><span class="flaticon-comment"></span>08</a>
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Luke Norbert</a></h4>
-                            <div class="designation">Programme Coordinator</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Team Blokc One -->
-                <div class="col-lg-4 team-block-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
-                        <div class="image">
-                            <a href="#"><img src="images/resource/team-15.jpg" alt=""></a>
-                            <div class="overlay">
-                                <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                            <div class="date"><span class="flaticon-clock"></span>Jul 14, 2019</div>
+                            <h4><a href="blog-details.html">Water is more essential</a></h4>
+                            <div class="author-info">
+                                <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
+                                <div class="author-title"><a href="#">Rubin Santro</a></div>
+                                <div class="share-icon style-two post-share-icon">
+                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <ul>
+                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="lower-content">
-                            <h4> <a href="#">Rhoda Thelma</a></h4>
-                            <div class="designation">Programme Volunteer</div>
-                        </div>
                     </div>
                 </div>
-                <!-- End Block -->
             </div>
-        </div>
-    </section>
-
-    <!-- Team Section Two -->
-    <section class="team-section-two style-two">
-        <div class="auto-container">
-            <div class="wrapper-box">
-                <div class="five-item-carousel owl-theme owl-carousel owl-nav-none owl-dot-style-one">
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                 
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
-                                </div>                                
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
-                                </div>
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
-                                </div>                                
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
-                                </div>
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
-                                </div>                                
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
-                                </div>
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
+            <div class="posts-pagination mb-30 mt-20">
+                <ul>
+                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>
+                    <li><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>
+                </ul>
             </div>
         </div>
     </section>
 
 
+    
     <!-- Main Footer -->
     <footer class="main-footer">
         <div class="auto-container">
@@ -703,7 +506,7 @@
             <div class="footer-bottom">
                 <div class="left-content">
                     <div class="icon"><img src="images/resource/logo-icon.png" alt=""></div>
-                    <div class="copyright-text">Designed By <a href="#">Tushar Bohra | Prajun Lungeli Magar</a></div>
+                    <div class="copyright-text"><br>Designed By <a href="#">Tushar Bohra | Prajun Lungeli Magar</a></div>
                 </div>
                 <div class="right-content">
                     <ul class="social-icon-three">
@@ -766,9 +569,9 @@
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                </div>
                                     <input type="text" name="fname" placeholder="Email Address">
                                 </div>
+                            </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
                                     <input type="text" name="fname" placeholder="Contact">

@@ -38,7 +38,7 @@ def faq_page(request):
     return render(request, 'web/faq.html', context)
 
 
-def about_page(request):
+def about(request):
     context={}
     return render(request,'web/aboutus.html',context)
 
@@ -46,6 +46,16 @@ def about_page(request):
 def team_page(request):
     context={}
     return render(request,'web/team.html',context)
+
+
+def blog_page(request):
+    context={}
+    return render(request,'web/blog.html',context)
+
+
+def project_page(request):
+    context={}
+    return render(request,'web/project.html',context)
 
 class Login(auth_views.LoginView):
     template_name = 'registration/login_page.html'

@@ -59,8 +59,8 @@
                     </div>
                     <div class="right-content">
                         <ul class="contact-info">
-                            <li><span class="flaticon-mail"></span><a href="mailto:support@charity.com">support@orassnepal.com</a></li>
-                            <li><span class="flaticon-phone"></span><a href="tel:+9779869209306">+977 986 920 9306</a></li>
+                            <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
+                            <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
                         <div>
                             <li style="color: #febf10;"><a href="{% url 'web:staff' %}">Login</a></li>
@@ -111,13 +111,8 @@
                                                     <li><a href="event-details.html">Single Event</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Blog</a>
-                                                <ul>
-                                                    <li><a href="blog.html">Classic Grid View</a></li>
-                                                    <li><a href="blog-fullwidth.html">Fullwidth Masonry</a></li>
-                                                    <li><a href="blog-list.html">List With Sidebar</a></li>
-                                                    <li><a href="blog-details.html">Single Post</a></li>
-                                                </ul>
+                                            <li><a href="{% url 'web:blog' %}">Blog</a>
+                                                
                                             </li>
                                             <li class="current"><a href="{% url 'web:contact' %}">Contact</a></li>
                                         </ul>
@@ -174,7 +169,7 @@
         <!-- Mobile Menu  -->
         <div class="mobile-menu style-two">
             <div class="menu-box">
-                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 120px; height: 40px;"></a></div>
+                <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 100px; height: 40px;"></a></div>
                 <!-- Main Menu -->
                 <nav class="main-menu navbar-expand-xl navbar-dark">
                     <div class="navbar-header">
@@ -329,8 +324,8 @@
                         <div class="single-info">
                             <h4>Quick Contact</h4>
                             <div class="wrapper-box">
-                                <a href="mailto:supportyou@goodsoul.co">supportyou@goodsoul.com </a> <br>
-                                <a href="tel:+211456789123">+211 456 789 & 123</a>
+                                <a href="mailto:support@orassnepal.com">support@orassnepal.com </a> <br>
+                                <a href="tel:+9779841258298">+977 984 125 8298</a>
                             </div>
                             <a class="link-btn" href="#">Get Call Back</a>
                         </div>
@@ -340,18 +335,21 @@
         </div>
     </section>
 
-    <!-- Google Map -->
+    <!-- <div id="googleMap" style="width:100%;height:400px;"></div> -->
+    
+    
+
+    Google Map
     <div class="google-map">
         <!--Map Canvas-->
         <div class="map-canvas"
-            data-zoom="12"
-            data-lat="-37.817085"
-            data-lng="144.955631"
-            data-type="roadmap"
-            data-hue="#ffc400"
-            data-title="East Newyork"
+            data-zoom="19"
+            data-lat="27.656184"
+            data-lng="85.327691"
+            data-type="hybrid"
+            data-title="orassnepal"
             data-icon-path="images/icons/map-marker.png"
-            data-content="<p>P. B: 222. Mid Corner Street, 11201 <br> +224 620 63 09 00 & 11 <br> supportyou@jexixteam.com</p>">
+            data-content="<p>P. B: 222. Mid Corner Street, 11201 <br> +977 984 125 8928 <br> support@orassnepal.com</p>"></div>
         </div>
     </div>
 
@@ -365,30 +363,27 @@
                         <h4 class="widget-title">Contact</h4>
                         <ul>
                             <li>5404 Berrick Street, <br> 2nd cross, <br>Boston, MA 02115.</li>
-                            <li><a href="mailto:support@goodsoul.com">supportyou@goodsoul.com </a></li>
+                            <li><a href="mailto:support@orassnepal.com">support@orassnepal.com</a></li>
                         </ul>   
-                        <h3><a href="tel:+211456789">+211 456 789</a></h3>                 
+                        <h3><a href="tel:+9779841258298">+977 984 125 8298</a></h3>                 
                     </div>
                     <!-- About Widget -->
                     <div class="col-lg-3 col-md-6 about-widget footer-widget">
                         <h4 class="widget-title">About</h4>
                         <ul>
-                            <li><a href="#">Charity</a></li>
-                            <li><a href="#">Volunteers</a></li>
-                            <li><a href="#">Upcoming Events</a></li>
-                            <li><a href="#">Trending News</a></li>
-                            <li><a href="#">Causes</a></li>
+                            <li><a href="{% url 'web:donor' %}">Donors</a></li>
+                            <li><a href="{% url 'web:team' %}">Our Team</a></li>
+                            <li><a href="{% url 'web:blog' %}">Blogs</a></li>
+                            <li><a href="{% url 'web:project' %}">Projects</a></li>
                         </ul>                
                     </div>
                     <!-- Link Widget -->
                     <div class="col-lg-3 col-md-6 link-widget footer-widget">
                         <h4 class="widget-title">Quick Link</h4>
                         <ul>
-                            <li><a href="#">Private Policies</a></li>
                             <li><a href="#">Donate Now</a></li>
                             <li><a href="#">Become a Volunteer</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                         </ul>               
                     </div>
                     <!-- Newsletter Widget -->
@@ -405,14 +400,13 @@
             <div class="footer-bottom">
                 <div class="left-content">
                     <div class="icon"><img src="images/resource/logo-icon.png" alt=""></div>
-                    <div class="copyright-text"><a href="templateshub.net">Templateshub</a><a href="#">Goodsoul.</a> <br>Designed By <a href="#">Themekalia.</a></div>
+                    <div class="copyright-text"><br>Designed By <a href="#">Tushar Bohra | Prajun Lungeli Magar</a></div>
                 </div>
                 <div class="right-content">
                     <ul class="social-icon-three">
-                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                        <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                        <li><a href="https://www.facebook.com/orassnepal" target="_blank"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="https://twitter.com/orassnepal" target="_blank"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="https://www.instagram.com/orassnepal/" target="_blank"><span class="fa fa-instagram"></span></a></li>
                     </ul>
                 </div>
             </div>
