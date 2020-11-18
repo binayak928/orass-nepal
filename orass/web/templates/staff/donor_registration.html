@@ -1,0 +1,83 @@
+{% extends 'staff/base.html' %}
+{% load widget_tweaks %}
+
+
+{% block content %}
+
+<div class="card mb-12">
+    <div class="card shadow mb-4">
+      <div class="card-header">
+        <h4 class="m-0 font-weight-bold text-primary" style="text-align: center">Donor Registration</h4>
+      </div>
+
+      <div class="card-body">
+        <form method="post" style="margin: 0 20px 0 20px;">
+          {% csrf_token %}
+          {{ form.non_field_errors }}
+
+          <div class="card" style="margin-top: 20px">
+<!--            <div class="card-header"><h5><center>Appointment Time</center> </h5></div>-->
+<!--            <div class="card-body">-->
+<!--              <div class="form-group">-->
+<!--                <small class="text-danger">-->
+<!--                  {{ form.appointment_start.errors }}-->
+<!--                </small>-->
+<!--                <label>Appointment Start:</label>-->
+<!--                {% render_field form.appointment_start class="form-control" placeholder="" %}-->
+<!--              </div>-->
+
+<!--              <div class="form-group">-->
+<!--                <small class="text-danger">-->
+<!--                  {{ form.appointment_end.errors }}-->
+<!--                </small>-->
+<!--                <label>Appointment End:</label>-->
+<!--                {% render_field form.appointment_end class="form-control" placeholder="" %}-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+          <div class="card">
+            <div class="card-header">
+              <h5><center>Donor Details</center></h5>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <small class="text-danger">
+                      {{ form.name.errors }}
+                    </small>
+                    <label>Donor Name:</label>
+                    {% render_field form.name class="form-control" placeholder="" %}
+                </div>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <small class="text-danger">
+                    {{ form.date.errors }}
+                  </small>
+                  <label>Donation Date:</label>
+                  {{ form.date|add_class:'form-control' }}
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <small class="text-danger">
+                    {{ form.amt.errors }}
+                  </small>
+                  <label>Donation Amount:</label>
+                  {% render_field form.amt class="form-control" placeholder="" %}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+          </div>
+
+        </form>
+          <div class="form-group" style="margin-top: 20px; margin-left: 20px;">
+            <input class="btn btn-primary" type="submit" value="Book">
+            <a href="{% url 'web:view-donor' %}" class="btn btn-secondary">Cancel</a>
+          </div>
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

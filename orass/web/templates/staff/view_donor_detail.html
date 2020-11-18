@@ -1,0 +1,116 @@
+{% extends 'staff/base.html' %}
+
+
+{% block content %}
+
+<!-- Begin Page Content -->
+
+  <!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Donor Information</h1>
+
+<div class="card mb-12">
+
+    <div class="card-header">
+      <h3><center>Donor Detail</center> </h3>
+    </div>
+
+    <div class="card-body">
+        <div style="margin: 0 20px 0 20px;">
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Personal Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>First Name:</label>
+                            <input class="form-control" type="text" placeholder="{{ object.name }}" readonly>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Last Name:</label>
+                            <input class="form-control" type="text" placeholder="{{ donor.name }}" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <label>Gender:</label>
+                            <input class="form-control" type="text" placeholder="gender" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Donation Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Donation Date:</label>
+                            <input class="form-control" type="text" placeholder="{{ object.date }}" readonly>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Donation Amount:</label>
+                            <input class="form-control" type="text" placeholder="{{ object.amt }}" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Contact Details</center> </h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Contact Number:</label>
+                            <input class="form-control" type="text" placeholder="9xxxxxxxxx" readonly>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Email:</label>
+                            <input class="form-control" type="text" placeholder="email" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Address Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-3">
+                            <label>Country:</label>
+                            <input class="form-control" type="text" placeholder="country" readonly>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3">
+                            <label>State:</label>
+                            <input class="form-control" type="text" placeholder="state" readonly>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3">
+                            <label>District:</label>
+                            <input class="form-control" type="text" placeholder="district" readonly>
+                        </div>
+
+                        <div class="col-xs-6 col-sm-3">
+                            <label>City:</label>
+                            <input class="form-control" type="text" placeholder="city" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px">
+                <a href="{% url 'web:update-donor' donor.id%}" class="btn btn-primary">Update</a>
+                <a href="{% url 'web:view-donor' %}" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
