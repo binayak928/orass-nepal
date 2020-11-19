@@ -62,9 +62,7 @@
                             <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
                             <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
-                        <div>
-                            <li style="color: #febf10;"><a href="{% url 'web:staff' %}">Login</a></li>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -105,11 +103,8 @@
                                                     <li><a href="cause-details.html">Single Cause</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Events</a>
-                                                <ul>
-                                                    <li><a href="events-1.html">Events</a></li>
-                                                    <li><a href="event-details.html">Single Event</a></li>
-                                                </ul>
+                                            <li ><a href="{% url 'web:events' %}">Events</a>
+                                                
                                             </li>
                                             <li><a href="{% url 'web:blog' %}">Blog</a>
                                                 
@@ -120,12 +115,7 @@
                                 </nav><!-- Main Menu End-->
 
                             </div>
-                            <!--Search Box-->
-                            <div class="navbar-btn-wrap">
-                                <button class="anim-menu-btn">
-                                  <i class="flaticon-menu"></i>
-                                </button>
-                            </div>
+                            <!-- Donate Button- top -->
                             <div class="link-btn">
                                 <a href="#" class="theme-btn btn-style-four"><span>Donate</span></a>
                             </div>

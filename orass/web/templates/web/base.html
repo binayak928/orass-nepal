@@ -61,11 +61,9 @@
                             <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
                             <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
-                        <div>
-                            <li style="color: #febf10;"><a href="{% url 'web:staff' %}">Login</a></li>
-                        </div>
+                        
                     </div>
-                </div>
+                </div>  
             </div>
         </div>
 
@@ -104,11 +102,8 @@
                                                     <li><a href="cause-details.html">Single Cause</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Events</a>
-                                                <ul>
-                                                    <li><a href="events-1.html">Events</a></li>
-                                                    <li><a href="event-details.html">Single Event</a></li>
-                                                </ul>
+                                            <li ><a href="{% url 'web:events' %}">Events</a>
+                                                
                                             </li>
                                             <li><a href="{% url 'web:blog' %}">Blog</a>
                                             </li>
@@ -118,12 +113,7 @@
                                 </nav><!-- Main Menu End-->
 
                             </div>
-                            <!--Search Box-->
-                            <div class="navbar-btn-wrap">
-                                <button class="anim-menu-btn">
-                                  <i class="flaticon-menu"></i>
-                                </button>
-                            </div>
+                            <!-- Donate Button- top -->
                             <div class="link-btn">
                                 <a href="#" class="theme-btn btn-style-four"><span>Donate</span></a>
                             </div>
@@ -257,7 +247,7 @@
         <div class="swiper-container banner-slider">
             <div class="swiper-wrapper">
                 <!-- Slide Item -->
-                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/4.jpg' %});">
+                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/slide1.jpg' %});">
                     <div class="content-outer">
                         <div class="content-box">
                             <div class="inner">
@@ -270,7 +260,7 @@
                 </div>
 
                 <!-- Slide Item -->
-                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/5.jpg' %});">
+                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/slide3.jpg' %});">
                     <div class="content-outer">
                         <div class="content-box justify-content-end">
                             <div class="inner">
@@ -283,7 +273,7 @@
                 </div>
 
                 <!-- Slide Item -->
-                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/6.jpg' %});">
+                <div class="swiper-slide" style="background-image: url({% static 'images/main-slider/slide2.jpg' %});">
                     <div class="content-outer">
                         <div class="content-box">
                             <div class="inner">
@@ -486,145 +476,16 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section">
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <h1>Projects we have done</h1>
-                <div class="text">The right way to live as a human being, Just help to those people really need your help.</div>
-            </div>
-            <div class="row">
-                <!-- Project Block One -->
-                <div class="col-lg-6 col-md-12 project-block-one">
-                    <div class="inner-box">
-                        <div class="image">
-                            <img src="{% static 'images/resource/project-1.jpg' %}" alt="">
-                            <div class="icon-box">
-                                <span class="flaticon-maid"></span>
-                            </div>
-                        </div>
-                        <h3><a href="#">Children</a></h3>
-                    </div>
-                </div>
-                <!-- Project Block One -->
-                <div class="col-lg-6 col-md-12 project-block-one">
-                    <div class="inner-box">
-                        <div class="image">
-                            <img src="{% static 'images/resource/project-2.jpg' %}" alt="">
-                            <div class="icon-box">
-                                <span class="flaticon-maid"></span>
-                            </div>
-                        </div>
-                        <h3><a href="#">Women & Girls</a></h3>
-                    </div>
-                </div>
-                <!-- Project Block One -->
-                <div class="col-lg-4 col-md-6 project-block-one">
-                    <div class="inner-box">
-                        <div class="image">
-                            <img src="{% static 'images/resource/project-3.jpg' %}" alt="">
-                            <div class="icon-box">
-                                <span class="flaticon-maid"></span>
-                            </div>
-                        </div>
-                        <h3><a href="#">Education</a></h3>
-                    </div>
-                </div>
-                <!-- Project Block One -->
-                <div class="col-lg-4 col-md-6 project-block-one">
-                    <div class="inner-box">
-                        <div class="image">
-                            <img src="{% static 'images/resource/project-4.jpg' %}" alt="">
-                            <div class="icon-box">
-                                <span class="flaticon-maid"></span>
-                            </div>
-                        </div>
-                        <h3><a href="#">Hunger</a></h3>
-                    </div>
-                </div>
-                <!-- Project Block One -->
-                <div class="col-lg-4 col-md-6 project-block-one">
-                    <div class="inner-box">
-                        <div class="image">
-                            <img src="{% static 'images/resource/project-5.jpg' %}" alt="">
-                            <div class="icon-box">
-                                <span class="flaticon-maid"></span>
-                            </div>
-                        </div>
-                        <h3><a href="#">Medical</a></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="sec-bg-one" style="background-image: url({% static 'images/background/bg-6.jpg' %});"></div>
-        <div class="sec-bg-two" style="background-image: url({% static 'images/background/bg-4.jpg' %});"></div>
-        <div class="auto-container">
-            <div class="row align-items-lg-center justify-content-lg-between">
-                <div class="col-lg-8">
-                    <div class="testimonial-carousel-wrapper">
-                        <div class="single-item-carousel owl-carousel owl-theme">
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <div class="author-box">
-                                        <div class="author-info">
-                                            <div class="image"><img src="{% static 'images/resource/client-thumb-1.jpg' %}" alt=""></div>
-                                            <div class="author-title">Isaac Samuel</div>
-                                            <div class="designation">CEO & Founder <a href="#">Budget Fin</a></div>
-                                            <div class="logo"><img src="{% static 'images/clients/client-6.html' %}" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="content-box">
-                                        <h4>It’s helped me so much. Now I can <br>really get around office.</h4>
-                                        <div class="text">ORASS Nepal! is focused and disciplined in their approach with proven track record of delivering measurable change. Always we support them people.</div>
-                                        <div class="rating">
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                        </div>
-                                        <div class="quote"><span class="flaticon-quote"></span></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="testimonial-block-one">
-                                <div class="inner-box">
-                                    <div class="author-box">
-                                        <div class="author-info">
-                                            <div class="image"><img src="{% static 'images/resource/client-thumb-1.jpg' %}" alt=""></div>
-                                            <div class="author-title">Isaac Samuel</div>
-                                            <div class="designation">CEO & Founder <a href="#">Budget Fin</a></div>
-                                            <div class="logo"><img src="{% static 'images/clients/client-6.html' %}" alt=""></div>
-                                        </div>
-                                    </div>
-                                    <div class="content-box">
-                                        <h4>It’s helped me so much. Now I can <br>really get around office.</h4>
-                                        <div class="text">ORASS Nepal! is focused and disciplined in their approach with proven track record of delivering measurable change. Always we support them people.</div>
-                                        <div class="rating">
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                            <a href="#"><span class="fa fa-star"></span></a>
-                                        </div>
-                                        <div class="quote"><span class="flaticon-quote"></span></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="default-video-box">
-                        <a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link lightbox-image video-fancybox ripple"><span class="flaticon-multimedia-1"></span></a>
-                    </div>
-                </div>
+    <section class="testimonial-section" style="height: 800px;">
+            <div class="sec-title" style="text-align: center;word-spacing: 3px;letter-spacing: 2px;">
+                <h1>Taking Nepal to Space</h1>
             </div>
-        </div>
+            <div class="d-flex justify-content-center">
+                <video autoplay loop>
+                        <source src="{% static 'videos/intro.mp4' %}" type="video/mp4">
+                </video>
+            </div>
     </section>
 
 
@@ -672,13 +533,13 @@
                         <div class="swiper-container volunteer-image">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="author-thumb"><img src="{% static 'images/resource/image-12.jpg' %}" alt=""></div>
+                                    <div class="author-thumb"><img src="{% static 'images/main-slider/g2.png' %}" style="height: 350px; width: 1240px;"></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="author-thumb"><img src="{% static 'images/resource/image-12.jpg' %}" alt=""></div>
+                                    <div class="author-thumb"><img src="{% static 'images/main-slider/g3.jpg' %}" style="height: 400px;"></div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="author-thumb"><img src="{% static 'images/resource/image-12.jpg' %}" alt=""></div>
+                                    <div class="author-thumb"><img src="{% static 'images/main-slider/g4.jpg' %}" style="height:400px; width:350px;"></div>
                                 </div>
                             </div>
                             <div class="swiper-nav-button">

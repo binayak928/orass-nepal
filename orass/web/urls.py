@@ -26,6 +26,8 @@ urlpatterns = [
     path('team/', views.team_page, name='team'),
     path('blog/', views.blog_page, name='blog'),
     path('project/', views.project_page, name='project'),
+    path('events/', views.event_page, name='events'),
+    path('events/detail/', views.detail_page, name='event-details'),
 
     path('account/password_change/', PasswordChange.as_view(), name='change-password'),
     path('account/password_change_complete/', views.password_change_complete, name='change-password-completed'),

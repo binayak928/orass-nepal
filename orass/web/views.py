@@ -61,6 +61,16 @@ def project_page(request):
     return render(request, 'web/project.html', context)
 
 
+def event_page(request):
+    context={}
+    return render(request, 'web/event.html', context)
+
+
+def detail_page(request):
+    context={}
+    return render(request, 'web/registration.html', context)
+
+
 class Login(auth_views.LoginView):
     template_name = 'registration/login.html'
 
