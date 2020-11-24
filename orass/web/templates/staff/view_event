@@ -1,0 +1,79 @@
+{% extends "staff/base.html" %}
+{% load static %}
+
+
+{% block css %}
+
+<!-- Custom styles for this page -->
+<link href="{% static 'vendor/datatables/dataTables.bootstrap4.min.css' %}" rel="stylesheet">
+
+{# Include FontAwesome; required for icon display #}
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+
+{% endblock css %}
+
+
+{% block content %}
+
+<!-- Page Heading -->
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Donor Information</h1>
+    <a href="{% url 'web:donor-registration' %}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-upload fa-sm text-white-50"></i>
+        New Registration
+    </a>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-download fa-sm text-white-50"></i>
+        Generate Report
+    </a>
+</div>
+
+
+<div class="card mb-12">
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h4 class="m-0 font-weight-bold text-primary" style="text-align: center">Donors</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name </th>
+                        <th>Date</th>
+                        <th>Donated Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for donor in object_list %}
+                        <tr>
+                            <td><a href="{% url 'web:donor-detail' donor.id %}">{{ donor.id }}</a></td>
+                            <td><a href="{% url 'web:donor-detail' donor.id %}">{{ donor.name }}</a></td>
+                            <td>{{ donor.date }}</td>
+                            <td>{{ donor.amt }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
+
+{% block js %}
+
+<!-- Page level plugins -->
+<script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+
+{% endblock js %}

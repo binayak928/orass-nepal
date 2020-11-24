@@ -1,10 +1,8 @@
-import json
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
-from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, DetailView, UpdateView
-from .forms import DonorRegistrationForm
-from .models import DonationsDemo
+from .forms import DonorRegistrationForm, BlogCreationForm
+from .models import DonationsDemo, Blog
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 
@@ -52,8 +50,25 @@ def team_page(request):
 
 
 def blog_page(request):
-    context = {}
+    all_blogs = Blog.objects.all()
+    context = {
+        "blogs": all_blogs
+    }
     return render(request, 'web/blog.html', context)
+
+
+# def blog_detail(request):
+#     all_blogs = Blog.objects.all()
+#     context = {
+#         "blogs": all_blogs
+#     }
+#     return render(request, 'web/blog_detail.html', context)
+
+
+class BlogDetail(DetailView):
+    model = Blog
+    template_name = 'web/blog_detail.html'
+    context_object_name = 'blog'
 
 
 def project_page(request):
@@ -62,12 +77,12 @@ def project_page(request):
 
 
 def event_page(request):
-    context={}
+    context = {}
     return render(request, 'web/event.html', context)
 
 
 def detail_page(request):
-    context={}
+    context = {}
     return render(request, 'web/registration.html', context)
 
 
@@ -92,11 +107,11 @@ def donor_registration_view(request):
         form = DonorRegistrationForm(request.POST)
         if form.is_valid():
             data = form.cleaned_data
-            new_appointment = DonationsDemo(name=data['name'],
-                                            date=data['date'],
-                                            amt=data['amt'],
-                                            )
-            new_appointment.save()
+            donation = DonationsDemo(name=data['name'],
+                                     date=data['date'],
+                                     amt=data['amt'],
+                                     )
+            donation.save()
             return redirect('web:view-donor')
     else:
         form = DonorRegistrationForm()
@@ -130,3 +145,54 @@ class DonorUpdateView(UpdateView):
 
     def get_success_url(self):
         return reverse('web:view-donor')
+
+
+class EventList(ListView):
+    model = DonationsDemo
+    template_name = 'staff/view_event.html'
+
+
+class BlogList(ListView):
+    model = Blog
+    template_name = 'staff/view_blog.html'
+    context_object_name = 'blogs'
+
+
+class ViewBlogDetail(DetailView):
+    model = Blog
+    template_name = 'staff/view_blog_detail.html'
+    context_object_name = 'blog'
+
+
+class BlogUpdateView(UpdateView):
+    model = Blog
+    fields = ('author',
+              'post_date',
+              'title',
+              'category',
+              'body'
+              )
+    template_name = 'staff/update_blog_detail.html'
+    context_object_name = 'blog'
+
+    def get_success_url(self):
+        return reverse('web:view-blog')
+
+
+@login_required(login_url="/staff")
+def blog_creation_view(request):
+    if request.method == "POST":
+        form = BlogCreationForm(request.POST)
+        if form.is_valid():
+            data = form.cleaned_data
+            new_blog = Blog(author=data['author'],
+                            post_date=data['post_date'],
+                            title=data['title'],
+                            category=data['category'],
+                            body=data['body'],
+                            )
+            new_blog.save()
+            return redirect('web:view-blog')
+    else:
+        form = BlogCreationForm()
+    return render(request, 'staff/blog_creation.html', {'form': form})

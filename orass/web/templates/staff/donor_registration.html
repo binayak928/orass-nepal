@@ -1,6 +1,6 @@
 {% extends 'staff/base.html' %}
 {% load widget_tweaks %}
-
+{{ form.media }}
 
 {% block content %}
 
@@ -16,25 +16,6 @@
           {{ form.non_field_errors }}
 
           <div class="card" style="margin-top: 20px">
-<!--            <div class="card-header"><h5><center>Appointment Time</center> </h5></div>-->
-<!--            <div class="card-body">-->
-<!--              <div class="form-group">-->
-<!--                <small class="text-danger">-->
-<!--                  {{ form.appointment_start.errors }}-->
-<!--                </small>-->
-<!--                <label>Appointment Start:</label>-->
-<!--                {% render_field form.appointment_start class="form-control" placeholder="" %}-->
-<!--              </div>-->
-
-<!--              <div class="form-group">-->
-<!--                <small class="text-danger">-->
-<!--                  {{ form.appointment_end.errors }}-->
-<!--                </small>-->
-<!--                <label>Appointment End:</label>-->
-<!--                {% render_field form.appointment_end class="form-control" placeholder="" %}-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
 
           <div class="card">
             <div class="card-header">
@@ -46,7 +27,7 @@
                       {{ form.name.errors }}
                     </small>
                     <label>Donor Name:</label>
-                    {% render_field form.name class="form-control" placeholder="" %}
+                    {% render_field form.name class="form-control" placeholder=form.name.label %}
                 </div>
               <div class="row">
                 <div class="col-md-6 mb-3">
@@ -62,7 +43,7 @@
                     {{ form.amt.errors }}
                   </small>
                   <label>Donation Amount:</label>
-                  {% render_field form.amt class="form-control" placeholder="" %}
+                  {% render_field form.amt class="form-control" placeholder=form.amt.label %}
                 </div>
               </div>
 
@@ -70,12 +51,13 @@
             </div>
           </div>
           </div>
-
-        </form>
           <div class="form-group" style="margin-top: 20px; margin-left: 20px;">
-            <input class="btn btn-primary" type="submit" value="Book">
+            <input class="btn btn-primary" type="submit" value="Register">
             <a href="{% url 'web:view-donor' %}" class="btn btn-secondary">Cancel</a>
           </div>
+
+        </form>
+
       </div>
     </div>
 </div>

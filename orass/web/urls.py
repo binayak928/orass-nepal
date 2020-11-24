@@ -8,7 +8,12 @@ from .views import (
     PasswordChange,
     DonorList,
     ViewDonorDetail,
-    DonorUpdateView
+    DonorUpdateView,
+    EventList,
+    BlogList,
+    BlogDetail,
+    ViewBlogDetail,
+    BlogUpdateView
 )
 
 app_name = "web"
@@ -25,6 +30,7 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('team/', views.team_page, name='team'),
     path('blog/', views.blog_page, name='blog'),
+    path('blog/<int:pk>', BlogDetail.as_view(), name='blog-single'),
     path('project/', views.project_page, name='project'),
     path('events/', views.event_page, name='events'),
     path('events/detail/', views.detail_page, name='event-details'),
@@ -39,5 +45,17 @@ urlpatterns = [
     path('view/donors/<int:pk>/update/', login_required(DonorUpdateView.as_view(), login_url='/staff'),
          name='update-donor'),
 
+    path('view/events/', login_required(EventList.as_view(), login_url='/staff'),
+         name='view-event'),
+
+    path('view/blogs/', login_required(BlogList.as_view(), login_url='/staff'),
+         name='view-blog'),
+    path('view/blogs/<int:pk>', login_required(ViewBlogDetail.as_view(), login_url='/staff'),
+         name='blog-detail'),
+    path('view/blogs/<int:pk>/update/', login_required(BlogUpdateView.as_view(), login_url='/staff'),
+         name='update-blog'),
+
     path('donor/registration/', views.donor_registration_view, name='donor-registration'),
+
+    path('blog/create/', views.blog_creation_view, name='blog-creation'),
 ]

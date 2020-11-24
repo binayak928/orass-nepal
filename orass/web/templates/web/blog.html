@@ -227,10 +227,12 @@
         <div class="auto-container">
             <div class="row">
                 <!-- News Block Two -->
+                {% for blog in blogs %}
+
                 <div class="col-lg-4 col-md-6 news-block-two style-three">
                     <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
                         <div class="image">
-                            <div class="category"><a href="#">Tips & Advice</a></div>
+                            <div class="category"><a href="#">{{ blog.category }}</a></div>
                             <a href="blog-details.html"><img src="images/resource/news-5.jpg" alt=""></a>
                             <div class="post-meta-info">
                                 <a href="#"><span class="flaticon-eye"></span>21</a>
@@ -238,13 +240,13 @@
                             </div>
                         </div>
                         <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Jul 14, 2019</div>
-                            <h4><a href="blog-details.html">Water is more essential</a></h4>
+                            <div class="date"><span class="flaticon-clock"></span>{{ blog.post_date }}</div>
+                            <h4><a href="{% url 'web:blog-single' blog.id %}">{{ blog.title }}</a></h4>
                             <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Rubin Santro</a></div>
+                                <div class="image"><img src="" alt=""></div>
+                                <div class="author-title"><a href="#">{{ blog.author }}</a></div>
                                 <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
+                                    <div class="share-btn"><img src="{% static 'images/resource/dotted.png' }" alt=""></div>
                                     <ul>
                                         <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                         <li><a href="#"><span class="fa fa-twitter"></span></a></li>
@@ -255,161 +257,17 @@
                         </div>
                     </div>
                 </div>
-                <!-- News Block Two -->
-                <div class="col-lg-4 col-md-6 news-block-two style-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="400ms">
-                        <div class="image">
-                            <div class="category"><a href="#">Interviews</a></div>
-                            <a href="blog-details.html"><img src="images/resource/news-6.jpg" alt=""></a>
-                            <div class="post-meta-info">
-                                <a href="#"><span class="flaticon-eye"></span>14</a>
-                                <a href="#"><span class="flaticon-comment"></span>05</a>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Jun 05, 2019</div>
-                            <h4><a href="blog-details.html">Coaching for fundraisers</a></h4>
-                            <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Carl Ronny</a></div>
-                                <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
-                                    <ul>
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Block Two -->
-                <div class="col-lg-4 col-md-6 news-block-two style-three">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
-                        <div class="image">
-                            <div class="category"><a href="#">Disaster</a><a href="#">Video</a></div>
-                            <a href="blog-details.html"><img src="images/resource/news-7.jpg" alt=""></a>
-                            <div class="post-meta-info">
-                                <a href="#"><span class="flaticon-eye"></span>12</a>
-                                <a href="#"><span class="flaticon-comment"></span>02</a>
-                            </div>
-                            <div class="youtube-video-box"><a href="#"><span class="flaticon-logo"></span></a></div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Mar 27, 2019</div>
-                            <h4><a href="blog-details.html">Aid for japan flood</a></h4>
-                            <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-3.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Gene Emery</a></div>
-                                <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
-                                    <ul>
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Block Two -->
-                <div class="col-lg-4 col-md-6 news-block-two style-three">
-                    <div class="inner-box wow fadeInDown" data-wow-delay="400ms">
-                        <div class="image">
-                            <div class="category"><a href="#">Interviews</a></div>
-                            <a href="blog-details.html"><img src="images/resource/news-8.jpg" alt=""></a>
-                            <div class="post-meta-info">
-                                <a href="#"><span class="flaticon-eye"></span>14</a>
-                                <a href="#"><span class="flaticon-comment"></span>05</a>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Jun 05, 2019</div>
-                            <h4><a href="blog-details.html">Coaching for fundraisers</a></h4>
-                            <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-4.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Carl Ronny</a></div>
-                                <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
-                                    <ul>
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Block Two -->
-                <div class="col-lg-4 col-md-6 news-block-two style-three">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
-                        <div class="image">
-                            <div class="category"><a href="#">Disaster</a><a href="#">Video</a></div>
-                            <a href="blog-details.html"><img src="images/resource/news-9.jpg" alt=""></a>
-                            <div class="post-meta-info">
-                                <a href="#"><span class="flaticon-eye"></span>12</a>
-                                <a href="#"><span class="flaticon-comment"></span>02</a>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Mar 27, 2019</div>
-                            <h4><a href="blog-details.html">Aid for japan flood</a></h4>
-                            <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-1.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Gene Emery</a></div>
-                                <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
-                                    <ul>
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- News Block Two -->
-                <div class="col-lg-4 col-md-6 news-block-two style-three">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="200ms">
-                        <div class="image">
-                            <div class="category"><a href="#">Tips & Advice</a></div>
-                            <a href="blog-details.html"><img src="images/resource/news-10.jpg" alt=""></a>
-                            <div class="post-meta-info">
-                                <a href="#"><span class="flaticon-eye"></span>21</a>
-                                <a href="#"><span class="flaticon-comment"></span>08</a>
-                            </div>
-                        </div>
-                        <div class="lower-content">
-                            <div class="date"><span class="flaticon-clock"></span>Jul 14, 2019</div>
-                            <h4><a href="blog-details.html">Water is more essential</a></h4>
-                            <div class="author-info">
-                                <div class="image"><img src="images/resource/author-thumb-2.jpg" alt=""></div>
-                                <div class="author-title"><a href="#">Rubin Santro</a></div>
-                                <div class="share-icon style-two post-share-icon">
-                                    <div class="share-btn"><img src="images/resource/dotted.png" alt=""></div>
-                                    <ul>
-                                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fa fa-skype"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
+                {% endfor %}
             </div>
-            <div class="posts-pagination mb-30 mt-20">
-                <ul>
-                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>
-                    <li><a href="#">01</a></li>
-                    <li><a href="#">02</a></li>
-                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>
-                </ul>
-            </div>
+<!--            <div class="posts-pagination mb-30 mt-20">-->
+<!--                <ul>-->
+<!--                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>-->
+<!--                    <li><a href="#">01</a></li>-->
+<!--                    <li><a href="#">02</a></li>-->
+<!--                    <li><a href="#"><span class="flaticon-arrow-1"></span></a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
         </div>
     </section>
 
@@ -590,5 +448,4 @@
 
 </body>
 
-<!-- Goodsoul_html/contact.html  20 Nov 2019 03:32:18 GMT -->
 </html>

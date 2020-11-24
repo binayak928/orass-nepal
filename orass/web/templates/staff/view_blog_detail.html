@@ -1,0 +1,74 @@
+{% extends 'staff/base.html' %}
+
+
+{% block content %}
+
+<!-- Begin Page Content -->
+
+  <!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Blog Information</h1>
+
+<div class="card mb-12">
+
+    <div class="card-body">
+        <div style="margin: 0 20px 0 20px;">
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Author Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Author Name:</label>
+                            <input class="form-control" type="text" placeholder="{{ blog.author }}" readonly>
+                        </div>
+
+<!--                        <div class="col-md-6 mb-3">-->
+<!--                            <label>Last Name:</label>-->
+<!--                            <input class="form-control" type="text" placeholder="{{ donor.name }}" readonly>-->
+<!--                        </div>-->
+                    </div>
+
+<!--                    <div class="row">-->
+<!--                        <div class="col-md-3">-->
+<!--                            <label>Gender:</label>-->
+<!--                            <input class="form-control" type="text" placeholder="gender" readonly>-->
+<!--                        </div>-->
+<!--                    </div>-->
+                </div>
+            </div>
+
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Blog Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Publish Date:</label>
+                            <input class="form-control" type="text" placeholder="{{ blog.post_date }}" readonly></input>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Blog Category:</label>
+                            <input class="form-control" type="text" placeholder="{{ blog.category }}" readonly></input>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Blog Title:</label>
+                            <input class="form-control" type="text" placeholder="{{ blog.title }}" readonly></input>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Blog Content:</label>
+                            <textarea class="form-control" type="text" placeholder="{{ blog.body }}" readonly rows="20" cols="60"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px">
+                <a href="{% url 'web:update-blog' blog.id%}" class="btn btn-primary">Update</a>
+                <a href="{% url 'web:view-blog' %}" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+
