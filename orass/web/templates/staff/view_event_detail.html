@@ -1,0 +1,104 @@
+{% extends 'staff/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- Begin Page Content -->
+
+  <!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Event Information</h1>
+
+<div class="card mb-12">
+
+    <div class="card-body">
+        <div style="margin: 0 20px 0 20px;">
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Organizer Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label>Organizer Name:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.organizer }}" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Phone:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.phone }}" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Email:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.email }}" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Location Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label>Street:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.address_street }}" readonly>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>City:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.address_city }}" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Country:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.address_country }}" readonly>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Event Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Event Title:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.title }}" readonly></input>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Event Date:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.date }}" readonly></input>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Start Time:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.start }}" readonly></input>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>End Time:</label>
+                            <input class="form-control" type="text" placeholder="{{ event.end }}" readonly></input>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Event Description:</label>
+                            <textarea class="form-control" type="text" placeholder="{{ event.description }}" readonly rows="20" cols="60"></textarea>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Event Banner:</label>
+                            <img src="/media/{{ event.picture }}">
+                            <input class="form-control" type="text" placeholder="{{ event.picture }}" readonly></input>
+                        </div
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="form-group" style="margin-top: 20px">
+            <a href="{% url 'web:update-event' event.id %}" class="btn btn-primary">Update</a>
+            <a href="{% url 'web:view-event' %}" class="btn btn-secondary">Back</a>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+

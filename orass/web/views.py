@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.generic import ListView, DetailView, UpdateView
-from .forms import DonorRegistrationForm, BlogCreationForm
-from .models import DonationsDemo, Blog
+from .forms import DonorRegistrationForm, BlogCreationForm, EventCreationForm
+from .models import DonationsDemo, Blog, Event
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 
@@ -77,13 +77,22 @@ def project_page(request):
 
 
 def event_page(request):
-    context = {}
+    all_events = Event.objects.all()
+    context = {
+        "events": all_events
+    }
     return render(request, 'web/event.html', context)
 
 
-def detail_page(request):
-    context = {}
-    return render(request, 'web/registration.html', context)
+class EventDetail(DetailView):
+    model = Event
+    template_name = 'web/registration.html'
+    context_object_name = 'event'
+
+
+# def detail_page(request):
+#     context = {}
+#     return render(request, 'web/registration.html', context)
 
 
 class Login(auth_views.LoginView):
@@ -148,8 +157,36 @@ class DonorUpdateView(UpdateView):
 
 
 class EventList(ListView):
-    model = DonationsDemo
+    model = Event
     template_name = 'staff/view_event.html'
+
+
+class ViewEventDetail(DetailView):
+    model = Event
+    template_name = 'staff/view_event_detail.html'
+    context_object_name = 'event'
+
+
+class EventUpdateView(UpdateView):
+    model = Event
+    fields = ('date',
+              'start',
+              'end',
+              'title',
+              'address_street',
+              'address_city',
+              'address_country',
+              'description',
+              'organizer',
+              'phone',
+              'email',
+              'picture'
+              )
+    template_name = 'staff/update_event_detail.html'
+    context_object_name = 'event'
+
+    def get_success_url(self):
+        return reverse('web:view-event')
 
 
 class BlogList(ListView):
@@ -196,3 +233,29 @@ def blog_creation_view(request):
     else:
         form = BlogCreationForm()
     return render(request, 'staff/blog_creation.html', {'form': form})
+
+
+@login_required(login_url="/staff")
+def event_creation_view(request):
+    if request.method == "POST":
+        form = EventCreationForm(request.POST, request.FILES)
+        if form.is_valid():
+            data = form.cleaned_data
+            new_event = Event(date=data['date'],
+                              start=data['start'],
+                              end=data['end'],
+                              title=data['title'],
+                              address_street=data['address_street'],
+                              address_city=data['address_city'],
+                              address_country=data['address_country'],
+                              description=data['description'],
+                              organizer=data['organizer'],
+                              phone=data['phone'],
+                              email=data['email'],
+                              picture=data['picture']
+                              )
+            new_event.save()
+            return redirect('web:view-event')
+    else:
+        form = EventCreationForm()
+    return render(request, 'staff/event_creation.html', {'form': form})

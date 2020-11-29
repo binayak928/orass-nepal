@@ -1,4 +1,6 @@
+from django.conf import settings
 from django.conf.urls import url
+from django.conf.urls.static import static
 from django.urls import path, include
 from . import views
 from django.contrib.auth.decorators import login_required
@@ -13,7 +15,10 @@ from .views import (
     BlogList,
     BlogDetail,
     ViewBlogDetail,
-    BlogUpdateView
+    BlogUpdateView,
+    ViewEventDetail,
+    EventUpdateView,
+    EventDetail
 )
 
 app_name = "web"
@@ -33,7 +38,7 @@ urlpatterns = [
     path('blog/<int:pk>', BlogDetail.as_view(), name='blog-single'),
     path('project/', views.project_page, name='project'),
     path('events/', views.event_page, name='events'),
-    path('events/detail/', views.detail_page, name='event-details'),
+    path('events/<int:pk>', EventDetail.as_view(), name='event-details'),
 
     path('account/password_change/', PasswordChange.as_view(), name='change-password'),
     path('account/password_change_complete/', views.password_change_complete, name='change-password-completed'),
@@ -47,6 +52,10 @@ urlpatterns = [
 
     path('view/events/', login_required(EventList.as_view(), login_url='/staff'),
          name='view-event'),
+    path('view/events/<int:pk>', login_required(ViewEventDetail.as_view(), login_url='/staff'),
+         name='event-detail'),
+    path('view/events/<int:pk>/update/', login_required(EventUpdateView.as_view(), login_url='/staff'),
+         name='update-event'),
 
     path('view/blogs/', login_required(BlogList.as_view(), login_url='/staff'),
          name='view-blog'),
@@ -58,4 +67,7 @@ urlpatterns = [
     path('donor/registration/', views.donor_registration_view, name='donor-registration'),
 
     path('blog/create/', views.blog_creation_view, name='blog-creation'),
-]
+
+    path('event/create/', views.event_creation_view, name='event-creation'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

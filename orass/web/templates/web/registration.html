@@ -252,7 +252,7 @@
     <section class="upcoming-events-section-two style-two" style="background-image: url(images/background/bg-15.jpg);">
         <div class="auto-container">
             <div class="sec-title text-center light">
-                <h1>Cancer support - World’s biggest <br>coffee morning</h1>
+                <h1>{{ event.title }}</h1>
             </div>
                             
         </div>
@@ -265,13 +265,14 @@
                 <div class="col-lg-6">
                     <div class="content">
                         <h2>Where</h2>
-                        <div class="text">245 Holland Rd, Kensington, London W14 8BD <br>United Kingdom.</div>
+                        <div class="text">{{ event.address_street }}, {{ event.address_city }} <br>{{ event.address_country }}.</div>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="content">
                         <h2>When</h2>
-                        <div class="text">Block your calendar on - November 14, 2019 <br>Thursday at 09.00 to 14.00</div>
+                        <div class="text">Block your calendar on - {{ event.date }} <br>at {{ event.start }} to
+                            {{ event.end }}</div>
                     </div>
                 </div>
             </div>
@@ -292,26 +293,25 @@
                     <div class="tab-pane fadeInUp animated active" id="tab-two" role="tabpanel" aria-labelledby="tab-two">
                         <div class="row">
                             <div class="col-lg-6">
-                                <div class="image mb-30"><img src="images/resource/event-11.jpg" alt=""></div>
+                                <div class="image mb-30"><img src="/media/{{ event.picture }}" alt=""></div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="content">
                                     
                                     <div class="text">
-                                        <p>How all this mistaken idea of denouncing pleasure and praising pain was born <br> and I will give you a complete account of the system expound the actually <br>teachings of the great explorer of the truth pursues.</p>
-                                        <p>Denouncing pleasure and praising pain was born  and I will give you a complete <br>account of the system expound.</p>
+                                        <p>{{ event.description }}</p>
                                     </div>
                                     <div class="info-box">
                                         <h5>Organizer</h5>
-                                        <a href="#">Ollie M Reuben</a>
+                                        <a href="#">{{ event.organizer }}</a>
                                     </div>
                                     <div class="info-box">
                                         <h5>Phone</h5>
-                                        <a href="tel:+2114567890">+211 456 7890</a>
+                                        <a href="tel:{{ event.phone }}">{{ event.phone }}</a>
                                     </div>
                                     <div class="info-box">
                                         <h5>Email</h5>
-                                        <a href="mailto:reuben@goodsoul.com">reuben@goodsoul.com</a>
+                                        <a href="mailto:{{ event.email }}">{{ event.email }}</a>
                                     </div>
                                 </div>
                             </div>
