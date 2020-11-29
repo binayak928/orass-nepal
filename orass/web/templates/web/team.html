@@ -90,7 +90,7 @@
                                             <li class="dropdown current"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="{% url 'web:about'%}">About Us</a></li>
-                                                    <li><a href="{% url 'web:faq' %}">FAQ’s</a></li>
+                                                    <!-- <li><a href="{% url 'web:faq' %}">FAQ’s</a></li> -->
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
@@ -132,7 +132,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
+                            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="menu-column">
@@ -265,18 +265,22 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-1.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team5.jpg' %}"></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/orderofthedolphin" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href="https://twitter.com/pradiptainspace " target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href="https://www.instagram.com/pradipta.space/ " target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-linkedin"></span></a></li>                                          -->
+                                    </ul>
                                 </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Benjie Alphonso</a></h4>
-                            <div class="designation">Founder</div>
+                            <h4>Pradipta Shrestha</h4>
+                            <div class="designation">Advisor</div>
                         </div>
                     </div>
                 </div>
@@ -284,18 +288,46 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-2.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team6.jpg' %}" alt=""></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/paudelsaurav" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href=" https://twitter.com/paudelsaurav50 " target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href="https://www.instagram.com/paudelsaurav50/ " target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-linkedin"></span></a></li>                                          -->
+                                    </ul>
+                                </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Ivor Herbert</a></h4>
-                            <div class="designation">Head</div>
+                            <h4>Saurav Poudel</h4>
+                            <div class="designation">Advisor</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Blokc One -->
+                <div class="col-lg-4 team-block-three">
+                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                        <div class="image">
+                            <a href="#"><img src="{% static 'images/team/team1.jpg' %}" alt=""></a>
+                            <div class="overlay">
+                                <div>
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/mohantamangg " target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href="https://twitter.com/mohantamang76" target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href=" https://www.instagram.com/mohantamangg/ " target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-linkedin"></span></a></li>                                          -->
+                                    </ul>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h4>Mohan Tamanag</h4>
+                            <div class="designation">Operation Planner</div>
                         </div>
                     </div>
                 </div>
@@ -303,18 +335,22 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-29.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team2.jpg' %}" alt=""></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/ashwinee.kharel " target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-twitter"></span></a></li>                                              -->
+                                        <li><a href="https://www.instagram.com/ashwinee_kharal/" target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!--                                              -->
+                                    </ul>
+                                </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Benjie Alphonso</a></h4>
-                            <div class="designation">Support Staff</div>
+                            <h4>Ashwinee Kharel</h4>
+                            <div class="designation">Operation Planner</div>
                         </div>
                     </div>
                 </div>
@@ -322,18 +358,22 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-13.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team4.jpg' %}" alt=""></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/shirrishpoudel" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href="https://twitter.com/srishti_poudel" target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href="https://www.instagram.com/___shirish/" target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-linkedin"></span></a></li>                                          -->
+                                    </ul>
+                                </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Merlin Judson</a></h4>
-                            <div class="designation">Manager</div>
+                            <h4>Srishti Poudel</h4>
+                            <div class="designation">Strategic Development</div>
                         </div>
                     </div>
                 </div>
@@ -341,18 +381,22 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-14.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team3.jpg' %}" alt=""></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/oggysaud245" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href="https://twitter.com/Oggy_245" target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href="https://www.instagram.com/oggysaud245/" target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <!-- <li><a href="#"><span class="fa fa-linkedin"></span></a></li>                                          -->
+                                    </ul>
+                                </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Luke Norbert</a></h4>
-                            <div class="designation">Programme Coordinator</div>
+                            <h4>Ramesh Saud</h4>
+                            <div class="designation">Strategic Development</div>
                         </div>
                     </div>
                 </div>
@@ -360,18 +404,45 @@
                 <div class="col-lg-4 team-block-three">
                     <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
                         <div class="image">
-                            <a href="#"><img src="images/resource/team-15.jpg" alt=""></a>
+                            <a href="#"><img src="{% static 'images/team/team8.jpg' %}" alt=""></a>
                             <div class="overlay">
                                 <div>
-                                    <h4>Join our team</h4>
-                                    <div class="text">We are always looking for volunteers</div>
-                                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Join Now</span></a></div>
-                                </div> 
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/tushar.bohara.501" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <!--                                                  -->
+                                        <li><a href="https://www.instagram.com/tusharbohara/" target="_blank"><span class="fa fa-instagram" target="_blank"></span></a></li>                                             
+                                        <li><a href="https://www.linkedin.com/in/tushar-bohara/" target="_blank"><span class="fa fa-linkedin" target="_blank"></span></a></li>                                         
+                                    </ul>
+                                </div>                                    
                             </div>
                         </div>
                         <div class="lower-content">
-                            <h4> <a href="#">Rhoda Thelma</a></h4>
-                            <div class="designation">Programme Volunteer</div>
+                            <h4>Tushar Bohra</h4>
+                            <div class="designation">IT Support </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Team Blokc One -->
+                <div class="col-lg-4 team-block-three">
+                    <div class="inner-box wow fadeInDown" data-wow-delay="200ms">
+                        <div class="image">
+                            <a href="#"><img src="{% static 'images/team/team7.jpg' %}" alt=""></a>
+                            <div class="overlay">
+                                <div>
+                                    <h4>Connect With Me</h4>
+                                    <ul class="social-icon-three link-btn">                                             
+                                        <li><a href="https://www.facebook.com/prajunlungelimagar" target="_blank"><span class="fa fa-facebook"></span></a></li>                                             
+                                        <li><a href="https://twitter.com/prajun123l" target="_blank"><span class="fa fa-twitter"></span></a></li>                                             
+                                        <li><a href="https://www.instagram.com/prajun_magar/" target="_blank"><span class="fa fa-instagram"></span></a></li>                                             
+                                        <li><a href="https://www.linkedin.com/in/prajun-lungeli-magar/" target="_blank"><span class="fa fa-linkedin"></span></a></li>                                         
+                                    </ul>
+                                </div>                                    
+                            </div>
+                        </div>
+                        <div class="lower-content">
+                            <h4>Prajun Lungeli</h4>
+                            <div class="designation">IT Support</div>
                         </div>
                     </div>
                 </div>
@@ -388,258 +459,175 @@
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team9.png' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
+                                    <h4> <a href="#">Rijana Shrestha</a></h4>
+                                    <div class="designation">Member</div>
                                 </div>                 
-                                <ul class="social-icon-two">
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
+                                </ul> -->
+                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team10.png' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
+                                    <h4> <a href="#">Sunny Shrestha</a></h4>
+                                    <div class="designation">Member</div>
                                 </div>                                
-                                <ul class="social-icon-two">
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team11.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
+                                    <h4> <a href="#">Shrijan Ghimire</a></h4>
+                                    <div class="designation">Member</div>
                                 </div>
-                                <ul class="social-icon-two">
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team12.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
-                                </div>                                
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
+                                    <h4> <a href="#">Krishna Mishra</a></h4>
+                                    <div class="designation">Member</div>
                                 </div>
-                                <ul class="social-icon-two">
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team13.jpeg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Ivor Herbert</a></h4>
-                                    <div class="designation">Manager</div>
-                                </div>                                
-                                <ul class="social-icon-two">
-                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Team Blokc Two -->
-                    <div class="team-block-two">
-                        <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-8.jpg" alt=""></a></div>
-                            <div class="overlay">
-                                <div class="author-info">
-                                    <h4> <a href="#">Merlin Judson</a></h4>
-                                    <div class="designation">Ground Person</div>
+                                    <h4> <a href="#">Pragya Mallick</a></h4>
+                                    <div class="designation">Member</div>
                                 </div>
-                                <ul class="social-icon-two">
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-9.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team14.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
+                                    <h4> <a href="#">Sunil Belbase</a></h4>
+                                    <div class="designation">Member</div>
+                                </div>
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-10.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team15.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
+                                    <h4> <a href="#">Ujjwol Dhakal</a></h4>
+                                    <div class="designation">Member</div>
+                                </div>
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-11.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team16.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
+                                    <h4> <a href="#">Asmi Rana</a></h4>
+                                    <div class="designation">Member</div>
+                                </div>
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
                     <!-- Team Blokc Two -->
                     <div class="team-block-two">
                         <div class="inner-box">
-                            <div class="image"><a href="#"><img src="images/resource/team-12.jpg" alt=""></a></div>
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team17.jpg' %}" style="height:300px;" alt=""></a></div>
                             <div class="overlay">
                                 <div class="author-info">
-                                    <h4> <a href="#">Benjie Alphonso</a></h4>
-                                    <div class="designation">Founder</div>
-                                </div>                                    
-                                <ul class="social-icon-two">
+                                    <h4> <a href="#">Shreeja Shrijan Shrestha</a></h4>
+                                    <div class="designation">Member</div>
+                                </div>
+                                <!-- <ul class="social-icon-two">
                                     <li><a href="#"><span class="fa fa-facebook"></span></a></li>
                                     <li><a href="#"><span class="fa fa-twitter"></span></a></li>
                                     <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
-                                </ul>
+                                </ul> -->
                             </div>
                         </div>
                     </div>
+                    <!-- Team Blokc Two -->
+                    <div class="team-block-two">
+                        <div class="inner-box">
+                            <div class="image"><a href="#"><img src="{% static 'images/team/team18.jpg' %}" style="height:300px;" alt=""></a></div>
+                            <div class="overlay">
+                                <div class="author-info">
+                                    <h4> <a href="#">Anish Ghimire</a></h4>
+                                    <div class="designation">Member</div>
+                                </div>
+                                <!-- <ul class="social-icon-two">
+                                    <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                                </ul> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Team Blokc Two end -->
                 </div>                
             </div>
         </div>

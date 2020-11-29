@@ -89,7 +89,7 @@
                                             <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="{% url 'web:about' %}">About Us</a></li>
-                                                    <li><a href="{% url 'web:faq' %}">FAQ’s</a></li>
+                                                    <!-- <li><a href="{% url 'web:faq' %}">FAQ’s</a></li> -->
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
@@ -130,7 +130,7 @@
                 <div class="wrapper-box">
                     <div class="logo-column">
                         <div class="logo-box">
-                            <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
+                            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" title="" style="width: 100px; height: 40px;"></a></div>
                         </div>
                     </div>
                     <div class="menu-column">
@@ -296,8 +296,13 @@
     <section class="feature-section">
         <div class="auto-container">
             <div class="sec-title text-center" style="margin-top: 30px;">
-                <h1>Live as a human being</h1>
-                <div class="text">The right way to live as a human being, Just help to those people really need your help.</div>
+                <h1>Why Nepal needs to go to Space</h1>
+                <div class="text">The dream of Space expedition became a reality when the Soviet Union 
+                    launched world’s first artificial satellite, the Sputnik 1. Since then, numerous countries 
+                    have constantly been trying to develop their space-based infrastructures to an optimum level. 
+                    Even for the developing countries like Nepal, Space Exploration shows a huge potential in addressing
+                    the challenges that people stand up which shall help Nepal in acquiring outer space technological 
+                    capabilities and speed up its scientific, technical and economic development.</div>
             </div>
             <div class="row">
                 <!-- Feature Block Two -->
@@ -306,11 +311,11 @@
                         <div class="icon-box">
                             <img src="{% static 'images/icons/icon-6.png' %}" alt="">
                         </div>
-                        <h4>Become a Volunteer</h4>
+                        <h4>Research</h4>
                         <div class="overlay" style="background-image: url({% static 'images/background/bg-2.jpg' %});">
-                            <h4>Become a Volunteer</h4>
-                            <div class="text">Indignation and dislike mens all <br>beguiled demoralized. </div>
-                            <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div>
+                            <h4>Research</h4>
+                            <div class="text">Creates hot topics to discuss and<br>research on different Sci <br>Phenomena</div>
+                            <!-- <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div> -->
                         </div>
                     </div>
                 </div>
@@ -320,13 +325,13 @@
                         <div class="icon-box">
                             <img src="{% static 'images/icons/icon-7.png' %}" alt="">
                         </div>
-                        <h4>Shelter for Homeless</h4>
+                        <h4>Scientific Development</h4>
                         <div class="overlay" style="background-image: url({% static 'images/background/bg-2.jpg' %});">
-                            <h4>Shelter for Homeless</h4>
-                            <div class="text">Indignation and dislike mens all <br>beguiled demoralized. </div>
-                            <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div>
+                            <h4>Scientific Development</h4>
+                            <div class="text">Space exploration leads to various <br>scientific developments.</div>
+                            <!-- <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div> -->
                         </div>
-                    </div>
+                        </div>
                 </div>
                 <!-- Feature Block Two -->
                 <div class="col-lg-3 col-md-6 feature-block-two">
@@ -334,11 +339,11 @@
                         <div class="icon-box">
                             <img src="{% static 'images/icons/icon-8.png' %}" alt="">
                         </div>
-                        <h4>Make World Happier</h4>
+                        <h4>Engineering</h4>
                         <div class="overlay" style="background-image: url({% static 'images/background/bg-2.jpg' %});">
-                            <h4>Make World Happier</h4>
-                            <div class="text">Indignation and dislike mens all <br>beguiled demoralized. </div>
-                            <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div>
+                            <h4>Engineering</h4>
+                            <div class="text">Space technologies shows the engineering abilities of the nation</div>
+                            <!-- <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div> -->
                         </div>
                     </div>
                 </div>
@@ -348,11 +353,11 @@
                         <div class="icon-box">
                             <img src="{% static 'images/icons/icon-9.png' %}" alt="">
                         </div>
-                        <h4>Give Helthy Life</h4>
+                        <h4>Growing Market</h4>
                         <div class="overlay" style="background-image: url({% static 'images/background/bg-2.jpg' %});">
-                            <h4>Give Helthy Life</h4>
-                            <div class="text">Indignation and dislike mens all <br>beguiled demoralized. </div>
-                            <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div>
+                            <h4>Growing Market</h4>
+                            <div class="text">It is said that the future of world's<br>economy lies in the Space <br>Exploration</div>
+                            <!-- <div class="link-btn"><a href="#" class="theme-btn btn-style-five"><span>More Details</span></a></div> -->
                         </div>
                     </div>
                 </div>
@@ -382,7 +387,7 @@
                     <div class="cause-block-three">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="{% static 'images/resource/cause-7.jpg' %}" alt="">
+                                <img src="{% static 'images/main-slider/g2.png' %}" style="width: 500px;">
                             </div>
                             <div class="content-wrapper">
                                 <!--Progress Levels-->
@@ -432,10 +437,10 @@
                                     <h4><a href="cause-details.html">Make somalians happy</a></h4>
                                     <div class="text">Foresee the pain and trouble that bound <br>to ensue and equal blame </div>
                                     <ul class="info-box">
+                                        <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                         <li><a href="#"><span>Raised:</span> <br>$92000</a></li>
                                         <li><a href="#"><span>Goal:</span> <br>$120000</a></li>
                                     </ul>
-                                    <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                 </div>
                             </div>
                         </div>
@@ -482,7 +487,7 @@
                 <h1>Taking Nepal to Space</h1>
             </div>
             <div class="d-flex justify-content-center">
-                <video autoplay loop>
+                <video autoplay loop muted>
                         <source src="{% static 'videos/intro.mp4' %}" type="video/mp4">
                 </video>
             </div>
@@ -533,7 +538,7 @@
                         <div class="swiper-container volunteer-image">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="author-thumb"><img src="{% static 'images/main-slider/g2.png' %}" style="height: 350px; width: 1240px;"></div>
+                                    <div class="author-thumb"><img src="{% static 'images/garuda/g5.jpg' %}" style="height: 350px; width: 1240px;"></div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="author-thumb"><img src="{% static 'images/main-slider/g3.jpg' %}" style="height: 400px;"></div>
@@ -550,20 +555,21 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
+                        <H1>Project Description</H1>
                         <div class="swiper-container volunteer-content">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
+                                    
                                     <!-- Volunteer Block -->
                                     <div class="volunteer-block">
                                         <div class="inner-box">
-                                            <div class="icon-box"><span class="flaticon-love"></span></div>
-                                            <h1>Caring is the gift of making <br>the ordinary special.</h1>
-                                            <h4><span class="flaticon-next"></span>Complete our online registration form:</h4>
-                                            <ul class="list">
-                                                <li>With righteous indignation and dislike</li>
-                                                <li>Perfectly simple and easy</li>
-                                                <li>Have to be repudiated & annoyances</li>
-                                            </ul>
+                                            <h1>Garuda</h1>
+                                            <h7> Garuda is a 89 inch tall and 6 inch wide Solid sounding rocket with the targeted apogee of 10,000 ft. 
+                                                This is the second rocket project of ORASS-Nepal. This rocket is designed by the team of 30 engineering 
+                                                students from different universities and institutions to compete in Spaceport America Cup 2021. Garuda 
+                                                is named after the king of birds, who can fly swiftly anywhere as expected from our Rocket to help us 
+                                                reach 10,000 ft.
+                                            </h7>
                                         </div>
                                     </div>
                                 </div>
@@ -571,14 +577,14 @@
                                     <!-- Volunteer Block -->
                                     <div class="volunteer-block">
                                         <div class="inner-box">
-                                            <div class="icon-box"><span class="flaticon-love"></span></div>
-                                            <h1>Caring is the gift of making <br>the ordinary special.</h1>
-                                            <h4><span class="flaticon-next"></span>Complete our online registration form:</h4>
-                                            <ul>
-                                                <li>With righteous indignation and dislike</li>
-                                                <li>Perfectly simple and easy</li>
-                                                <li>Have to be repudiated & annoyances</li>
-                                            </ul>
+                                            <h1>The Phoenix</h1>
+                                            <h7> The Phoenix  is a 60 inch solid sounding rocket designed by ORASS. 
+                                                This is our first rocket project with student researched and developed motors. 
+                                                It will be able to carry 1.5 kg payload to 1.4 km apogee. It has a single parachute 
+                                                deployment mechanism that will help the rocket for safe touch down and reusability. 
+                                                This rocket was designed to compete in Military Science and Technology Competition-II. 
+                                                Due to Covid Pandemic it was not completed on time.
+                                            </h7>
                                         </div>
                                     </div>
                                 </div>
@@ -586,14 +592,12 @@
                                     <!-- Volunteer Block -->
                                     <div class="volunteer-block">
                                         <div class="inner-box">
-                                            <div class="icon-box"><span class="flaticon-love"></span></div>
-                                            <h1>Caring is the gift of making <br>the ordinary special.</h1>
-                                            <h4><span class="flaticon-next"></span>Complete our online registration form:</h4>
-                                            <ul>
-                                                <li>With righteous indignation and dislike</li>
-                                                <li>Perfectly simple and easy</li>
-                                                <li>Have to be repudiated & annoyances</li>
-                                            </ul>
+                                            <h1>SWIFT SAT</h1>
+                                            <h7> Swift Sat is a can sized satellite model that has a similar working process like that of a real Satellite. 
+                                                This Can-Sat is capable of reading basic atmospheric data like temperature, humidity, air pressure, altitude 
+                                                from the sea level, light Intensity, it’s latitude, longitude and orientation and transmitting them to the ground 
+                                                station. This Project bagged 2nd position in NCIT Expo on Technology under best hardware project.
+                                            </h7>
                                         </div>
                                     </div>
                                 </div>
@@ -619,14 +623,14 @@
                     <div class="col-lg-3 col-md-6 about-widget-two footer-widget">
                         <h4 class="widget-title">About</h4>
                         <div class="text">The great explorer of the truth, theat master builders off human happiness no one rejects, dislikes, or avoids all pleasures itself, because it pleasures rationally encounter.</div>
-                        <div class="logo"><a href="index-2.html"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
+                        <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
                     </div>
                     <!-- Link Widget -->
                     <div class="col-lg-3 col-md-6 link-widget-two footer-widget">
                         <h4 class="widget-title">Usefull Links</h4>
                         <ul>
                             <li><a href="{% url 'web:donor' %}">Donors</a></li>
-                            <li><a href="#">Volunteers</a></li>
+                            <!-- <li><a href="#">Volunteers</a></li> -->
                             <li><a href="{% url 'web:project' %}">Project</a></li>
                             <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                         </ul>
@@ -682,7 +686,7 @@
                                 <span class="point"></span>
                             </div>
                         </div>
-                        <div class="link-btn"><a href="#"><span class="flaticon-next"></span>Contact Us</a></div>
+                        <div class="link-btn"><a href="{% url 'web:contact' %}"><span class="flaticon-next"></span>Contact Us</a></div>
                     </div>
                 </div>
             </div>
