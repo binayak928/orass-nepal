@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
+from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import ListView, DetailView, UpdateView
 from .forms import DonorRegistrationForm, BlogCreationForm, EventCreationForm
-from .models import DonationsDemo, Blog, Event
+from .models import DonationsDemo, Blog, Event, InterestedDonor
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 
@@ -14,6 +15,20 @@ from django.contrib.auth import views as auth_views
 def home_page(request):
     context = {}
     return render(request, 'web/base.html', context)
+
+
+@csrf_exempt
+def save_interested_info(request):
+    if request.method == "POST":
+        print(request.POST["name"])
+        print(request.POST["email"])
+        print(request.POST["phone"])
+        print(request.POST["nationality"])
+
+        info = InterestedDonor(name=request.POST["name"], email=request.POST["email"], phone=request.POST["phone"], nationality=request.POST["nationality"])
+
+        info.save()
+        return redirect('web:home')
 
 
 def test_page(request):
