@@ -74,11 +74,6 @@ class BlogDetail(DetailView):
     context_object_name = 'blog'
 
 
-def project_page(request):
-    context = {}
-    return render(request, 'web/project.html', context)
-
-
 def event_page(request):
     all_events = Event.objects.all()
     context = {
@@ -86,6 +81,20 @@ def event_page(request):
     }
     return render(request, 'web/event.html', context)
 
+
+def garuda_page(request):
+    context={}
+    return render(request, 'web/garuda.html', context)
+
+
+def phoenix_page(request):
+    context={}
+    return render(request, 'web/pheonix.html', context)
+
+
+def swiftSat_page(request):
+    context={}
+    return render(request, 'web/sat.html', context)
 
 class EventDetail(DetailView):
     model = Event

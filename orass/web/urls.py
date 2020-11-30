@@ -39,6 +39,9 @@ urlpatterns = [
     path('project/', views.project_page, name='project'),
     path('events/', views.event_page, name='events'),
     path('events/<int:pk>', EventDetail.as_view(), name='event-details'),
+    path('garuda/', views.garuda_page, name='garuda'),
+    path('phoenix/', views.phoenix_page, name='phoenix'),
+    path('swiftSat/', views.swiftSat_page, name='sat'),
 
     path('account/password_change/', PasswordChange.as_view(), name='change-password'),
     path('account/password_change_complete/', views.password_change_complete, name='change-password-completed'),
