@@ -105,11 +105,6 @@ def staff_home(request):
     return render(request, 'staff/index.html', context)
 
 
-class PasswordChange(auth_views.PasswordChangeView):
-    template_name = 'registration/change_password.html'
-    success_url = reverse_lazy('web:change-password-completed')
-
-
 @login_required(login_url="/staff")
 def donor_registration_view(request):
     if request.method == "POST":
@@ -130,6 +125,11 @@ def donor_registration_view(request):
 @login_required(login_url="/staff")
 def password_change_complete(request):
     return render(request, 'registration/change_password_completed.html')
+
+
+class PasswordChange(auth_views.PasswordChangeView):
+    template_name = 'registration/change_password.html'
+    success_url = reverse_lazy('web:change-password-completed')
 
 
 class DonorList(ListView):
