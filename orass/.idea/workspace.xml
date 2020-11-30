@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/migrations/0010_interesteddonor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1604662040505</updated>
       <workItem from="1604662042104" duration="43000" />
-      <workItem from="1606745817525" duration="1458000" />
+      <workItem from="1606745817525" duration="1877000" />
     </task>
     <servers />
   </component>
