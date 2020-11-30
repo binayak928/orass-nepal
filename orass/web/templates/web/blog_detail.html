@@ -90,18 +90,12 @@
                                             <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="{% url 'web:about'%}">About Us</a></li>
-                                                    <!-- <li><a href="{% url 'web:faq' %}">FAQ’s</a></li> -->
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Project</a>
-                                                <ul>
-                                                    <li><a href="causes-1.html">Style 01 - Grid View</a></li>
-                                                    <li><a href="causes-2.html">Style 02 - List View</a></li>
-                                                    <li><a href="causes-3.html">Style 01 - Carousel</a></li>
-                                                    <li><a href="cause-details.html">Single Cause</a></li>
-                                                </ul>
+                                            <li><a href="{% url 'web:project' %}">Project</a>
+                                                
                                             </li>
                                             <li ><a href="{% url 'web:events' %}">Events</a>
 
@@ -117,7 +111,7 @@
 
                             <!-- Donate Button- top -->
                             <div class="link-btn">
-                                <a href="#" class="theme-btn btn-style-four"><span>Donate</span></a>
+                                <a href="#" class="theme-btn btn-style-four donate-box-btn"><span>Donate</span></a>
                             </div>
                         </div>
                     </div>
@@ -440,7 +434,7 @@
                     <div class="col-lg-3 col-md-6 contact-widget footer-widget">
                         <h4 class="widget-title">Contact</h4>
                         <ul>
-                            <li>5404 Berrick Street, <br> 2nd cross, <br>Boston, MA 02115.</li>
+                            <li>Madhyapur Thimi <br> Bhaktapur</li>
                             <li><a href="mailto:support@orassnepal.com">support@orassnepal.com </a></li>
                         </ul>
                         <h3><a href="tel:+9779841258298">+977 984 125 8298</a></h3>
@@ -452,27 +446,19 @@
                             <li><a href="{% url 'web:donor' %}">Donors</a></li>
                             <li><a href="{% url 'web:team' %}">Our Team</a></li>
                             <li><a href="{% url 'web:blog' %}">Blogs</a></li>
-                            <li><a href="{% url 'web:project' %}">Projects</a></li>
+                            <li><a href="{% url 'web:project' %}">Project</a></li>
                         </ul>
                     </div>
                     <!-- Link Widget -->
                     <div class="col-lg-3 col-md-6 link-widget footer-widget">
                         <h4 class="widget-title">Quick Link</h4>
                         <ul>
-                            <li><a href="#">Donate Now</a></li>
+                            <li><a class="donate-box-btn">Donate Now</a></li>
                             <li><a href="#">Become a Volunteer</a></li>
                             <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                         </ul>
                     </div>
-                    <!-- Newsletter Widget -->
-                    <div class="col-lg-3 col-md-6 newsletter-widget footer-widget">
-                        <h4 class="widget-title">Newsletter</h4>
-                        <div class="text">Subscribe us and get latest news & <br>upcoming events.</div>
-                        <form action="#">
-                            <input type="email" placeholder="Emial Address...">
-                            <button class="submin-btn"><span class="flaticon-next"></span>Subscribe Us</button>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
             <div class="footer-bottom">
@@ -494,7 +480,7 @@
     <!--Scroll to top-->
     <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon flaticon-arrow"></span></div>
 
-    <div id="donate-popup" class="donate-popup">
+    <div id="donate-popup" class="donate-popup style-two">
 
         <div class="popup-overlay"></div>
 
@@ -503,7 +489,7 @@
                 <div class="close-donate theme-btn"><span class="flaticon-close"></span></div>
                 <div class="sec-title text-center">
                     <h1>Donate us to achive our goal</h1>
-                    <div class="text">Beguiled and demoralized by the charms of pleasure of the moment, so by desire, <br>that they cannot foresee.</div>
+                    <div class="text">Currently we don't have our payment gateway enabled. <br>Our support team will contact you soon.<br>Thank you for your support.</div>
                 </div>
 
                 <form  action="#" class="donate-form default-form">
@@ -525,6 +511,7 @@
                             <label for="donate-amount-4" data-amount="100">$100</label>
                         </li>
                         <li class="other-amount">
+
                             <div class="input-container" data-message="Every dollar you donate helps end hunger."><input type="text" id="other-amount" placeholder="Other Amount"  />
                             </div>
                         </li>
@@ -536,30 +523,25 @@
                         <div class="row clearfix">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Full Name">
+                                    <input type="text" name="name" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Email Address">
+                                    <input type="text" name="email" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Contact">
+                                    <input type="text" name="contact" placeholder="Contact">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <select class="filters-selec form-controlt selectmenu" name="form_subject">
-                                        <option value="*">Payment Via</option>
-                                        <option value=".category-1">Cash</option>
-                                        <option value=".category-2">Card</option>
-                                        <option value=".category-2">Bank Transfer</option>
-                                        <option value=".category-2">Other</option>
-                                    </select>
+                                    <input type="text" name="nationality" placeholder="Nationality">
                                 </div>
                             </div>
+                            
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <button class="theme-btn btn-style-one" type="submit"><span>Donate Now</span></button>
@@ -579,6 +561,7 @@
 
         </div>
     </div>
+
 
 </div>
 <!--End pagewrapper-->

@@ -31,7 +31,7 @@ urlpatterns = [
     path('staff/', Login.as_view(), name='staff'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('staff/dashboard/', views.staff_home, name='dashboard'),
-    path('faq/', views.faq_page, name='faq'),
+#     path('faq/', views.faq_page, name='faq'),
     path('about/', views.about, name='about'),
     path('team/', views.team_page, name='team'),
     path('blog/', views.blog_page, name='blog'),

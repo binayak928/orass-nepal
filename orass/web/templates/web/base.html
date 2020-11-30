@@ -89,18 +89,12 @@
                                             <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
                                                     <li><a href="{% url 'web:about' %}">About Us</a></li>
-                                                    <!-- <li><a href="{% url 'web:faq' %}">FAQ’s</a></li> -->
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
                                             </li>
-                                            <li class="dropdown"><a href="#">Project</a>
-                                                <ul>
-                                                    <li><a href="causes-1.html">Style 01 - Grid View</a></li>
-                                                    <li><a href="causes-2.html">Style 02 - List View</a></li>
-                                                    <li><a href="causes-3.html">Style 01 - Carousel</a></li>
-                                                    <li><a href="cause-details.html">Single Cause</a></li>
-                                                </ul>
+                                            <li><a href="{% url 'web:project' %}">Project</a>
+                                                
                                             </li>
                                             <li ><a href="{% url 'web:events' %}">Events</a>
                                                 
@@ -115,7 +109,7 @@
                             </div>
                             <!-- Donate Button- top -->
                             <div class="link-btn">
-                                <a href="#" class="theme-btn btn-style-four"><span>Donate</span></a>
+                                <a href="#" class="theme-btn btn-style-four donate-box-btn"><span>Donate</span></a>
                             </div>
                         </div>
                     </div>
@@ -228,14 +222,7 @@
                         <h4><a href="blog-details.html">ORASS Nepal improves education infrastructure</a></h4>
                     </div>
                 </div>
-                <!-- Newsletter Widget -->
-                <div class="newsletter-widget-two">
-                    <div class="widget-title">Newsletter Subscription</div>
-                    <form action="#">
-                        <input type="email" placeholder="Enter Email Address">
-                        <button class="theme-btn btn-style-one w-100"><i class="flaticon-next"></i><span>Subscribe Us</span></button>
-                    </form>
-                </div>
+               
             </div>
         </div>
     </section>
@@ -251,9 +238,9 @@
                     <div class="content-outer">
                         <div class="content-box">
                             <div class="inner">
-                                <h4>Every good act counts</h4>
-                                <h1>Charity is a simple <br>method to prove <br>kindness.</h1>
-                                <div class="link-box"><a href="#" class="theme-btn btn-style-five"><span>Meet Volunteers</span></a></div>
+                                <h4>Always launching new ideas</h4>
+                                <h1>Try and Fly</h1>
+                                <div class="link-box"><a href="{% url 'web:team' %}" class="theme-btn btn-style-five"><span>Meet Volunteers</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -264,8 +251,7 @@
                     <div class="content-outer">
                         <div class="content-box justify-content-end">
                             <div class="inner">
-                                <h4>Charity is everywhere</h4>
-                                <h1>Actions speak <br>louder than words! <br>Give today.</h1>
+                                <h1>Let’s Take Nepal To Space</h1>
                                 <div class="link-box"><a href="#" class="theme-btn btn-style-five donate-box-btn"><span>Donate Now</span></a></div>
                             </div>
                         </div>
@@ -277,9 +263,9 @@
                     <div class="content-outer">
                         <div class="content-box">
                             <div class="inner">
-                                <h4>Every good act counts</h4>
-                                <h1>Charity is a simple <br>method to prove <br>kindness.</h1>
-                                <div class="link-box"><a href="#" class="theme-btn btn-style-five"><span>Meet Volunteers</span></a></div>
+                                
+                                <h1>Come fly with Orass</h1>
+                                <div class="link-box"><a href="{% url 'web:team' %}" class="theme-btn btn-style-five"><span>Meet Volunteers</span></a></div>
                             </div>
                         </div>
                     </div>
@@ -367,11 +353,11 @@
             <div class="auto-container">
                 <div class="wrapper-box">
                     <div class="left-content">
-                        <h3>You have the power to bring happiness.</h3>
-                        <div class="text">Expound the actual teachings of the great explorer of the truth, the masterr of human happiness.</div>
+                        <h3>You have the power to inovate.</h3>
+                        <div class="text">Expound the actual teachings of the great explorer of the truth, the master of revolution.</div>
                     </div>
                     <div class="right-content">
-                        <a href="#" class="theme-btn btn-style-five"><span>Meet Our Team</span></a>
+                        <a href="{% url 'web:team' %}" class="theme-btn btn-style-five"><span>Meet Our Team</span></a>
                     </div>
                 </div>
             </div>
@@ -380,6 +366,7 @@
 
     <!-- Causes Section Three -->
     <section class="causes-section-three" style="background-image: url({% static 'images/background/bg-3.jpg' %});">
+        
         <div class="auto-container">
             <div class="cause-carousel-wrapper">
                 <div class="single-item-carousel owl-theme owl-carousel owl-dot-style-one owl-nav-none">
@@ -387,7 +374,7 @@
                     <div class="cause-block-three">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="{% static 'images/main-slider/g2.png' %}" style="width: 500px;">
+                                <img src="{% static 'images/garuda/g6.jpg' %}" style="width: 560px;margin-left: 10%;">
                             </div>
                             <div class="content-wrapper">
                                 <!--Progress Levels-->
@@ -403,22 +390,23 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4><a href="cause-details.html">Make somalians happy</a></h4>
-                                    <div class="text">Foresee the pain and trouble that bound <br>to ensue and equal blame </div>
+                                    <h4><a href="cause-details.html">Recent Project (Garuda)</a></h4>
+                                    <div class="text">Help us to reach <br>space </div>
                                     <ul class="info-box">
-                                        <li><a href="#"><span>Raised:</span> <br>$72000</a></li>
-                                        <li><a href="#"><span>Goal:</span> <br>$100000</a></li>
+                                        <li><a href="#"><span>Raised:</span> <br>&#8377;72000</a></li>
+                                        <li><a href="#"><span>Goal:</span> <br>&#8377;100000</a></li>
                                     </ul>
                                     <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     <!-- Cause Block three -->
                     <div class="cause-block-three">
                         <div class="inner-box">
                             <div class="image">
-                                <img src="{% static 'images/resource/cause-7.jpg' %}" alt="">
+                                <img src="{% static 'images/garuda/g2.png' %}" style="height: 500px;width: 300px;margin-left: 15%;">
                             </div>
                             <div class="content-wrapper">
                                 <!--Progress Levels-->
@@ -434,42 +422,11 @@
                                     </div>
                                 </div>
                                 <div class="content">
-                                    <h4><a href="cause-details.html">Make somalians happy</a></h4>
-                                    <div class="text">Foresee the pain and trouble that bound <br>to ensue and equal blame </div>
+                                    <h4><a href="cause-details.html">Make Garuda Fly</a></h4>
+                                    <div class="text">Your small donation can help<br>Garuda fly</div>
                                     <ul class="info-box">
-                                        <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
-                                        <li><a href="#"><span>Raised:</span> <br>$92000</a></li>
-                                        <li><a href="#"><span>Goal:</span> <br>$120000</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Cause Block three -->
-                    <div class="cause-block-three">
-                        <div class="inner-box">
-                            <div class="image">
-                                <img src="{% static 'images/resource/cause-7.jpg' %}" alt="">
-                            </div>
-                            <div class="content-wrapper">
-                                <!--Progress Levels-->
-                                <div class="progress-levels style-two">
-
-                                    <!--Skill Box-->
-                                    <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
-                                        <div class="inner">
-                                            <div class="bar">
-                                                <div class="bar-innner"><div class="bar-fill" data-percent="60"><div class="percent"></div></div></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="content">
-                                    <h4><a href="cause-details.html">Make somalians happy</a></h4>
-                                    <div class="text">Foresee the pain and trouble that bound <br>to ensue and equal blame </div>
-                                    <ul class="info-box">
-                                        <li><a href="#"><span>Raised:</span> <br>$92000</a></li>
-                                        <li><a href="#"><span>Goal:</span> <br>$120000</a></li>
+                                        <li><a href="#"><span>Raised:</span> <br>&#8377; 92000</a></li>
+                                        <li><a href="#"><span>Goal:</span> <br>&#8377; 120000</a></li>
                                     </ul>
                                     <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                 </div>
@@ -619,11 +576,13 @@
         <div class="auto-container">
             <div class="widget-wrapper">
                 <div class="row">
+                    <div class="col-lg-2 col-md-6 about-widget-two footer-widget"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
                     <!-- About Widget -->
-                    <div class="col-lg-3 col-md-6 about-widget-two footer-widget">
+                    <div class="col-lg-4 col-md-6 about-widget-two footer-widget">
                         <h4 class="widget-title">About</h4>
-                        <div class="text">The great explorer of the truth, theat master builders off human happiness no one rejects, dislikes, or avoids all pleasures itself, because it pleasures rationally encounter.</div>
-                        <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-2.png' %}" alt=""></a></div>
+                        <div class="text" style="text-align: justify;">ORASS-Nepal aims to be a hub for all the space enthusiast around the country that brings every students from various universities and institutions together for the space exploration and development activities in Nepal by being the gateway to space. We let you to grow and apply your knowledge in a better way by involving you in a challenging engineering problems.
+                            “One More Steps Towards The Space”</div>
+                       
                     </div>
                     <!-- Link Widget -->
                     <div class="col-lg-3 col-md-6 link-widget-two footer-widget">
@@ -635,63 +594,21 @@
                             <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
                         </ul>
                     </div>
-                    <!-- Post Widget -->
-                    <div class="col-lg-3 col-md-6 post-widget footer-widget">
-                        <h4 class="widget-title">Trending Post</h4>
-                        <div class="post">
-                            <div class="date"><span class="flaticon-clock"></span>Jul 14, 2019</div>
-                            <h4><a href="blog-details.html">Coaching for our fundraisers</a></h4>
-                        </div>
-                        <div class="post">
-                            <div class="date"><span class="flaticon-clock"></span>May 21, 2019</div>
-                            <h4><a href="blog-details.html">Provide pure water for syrians</a></h4>
-                        </div>
-                        <div class="post">
-                            <div class="date"><span class="flaticon-clock"></span>Mar 27, 2019</div>
-                            <h4><a href="blog-details.html">Camp fo japan earth quake</a></h4>
-                        </div>
-                    </div>
+                    
                     <!-- Location Widget -->
-                    <div class="col-lg-3 col-md-6 office-location-widget footer-widget">
-                        <h4 class="widget-title">Our Offices</h4>
-                        <div class="wrapper-box">
-                            <div class="location-point">
-                                <div class="content">
-                                    <div class="text">54 Berrick Street, <br>Boston 02115. </div>
-                                </div>
-                                <span class="point"></span>
-                            </div>
-                            <div class="location-point">
-                                <div class="content">
-                                    <div class="text">54 Berrick Street, <br>Boston 02115.</div>
-                                </div>
-                                <span class="point"></span>
-                            </div>
-                            <div class="location-point">
-                                <div class="content">
-                                    <div class="text">54 Berrick Street, <br>Boston 02115.</div>
-                                </div>
-                                <span class="point"></span>
-                            </div>
-                            <div class="location-point">
-                                <div class="content">
-                                    <div class="text">54 Berrick Street, <br>Boston 02115.</div>
-                                </div>
-                                <span class="point"></span>
-                            </div>
-                            <div class="location-point">
-                                <div class="content">
-                                    <div class="text">54 Berrick Street, <br>Boston 02115.</div>
-                                </div>
-                                <span class="point"></span>
-                            </div>
-                        </div>
+                    <div class="col-lg-2 col-md-6 office-location-widget footer-widget">
+                        <h4 class="widget-title">Location</h4>
+                        <h5 style="color: white;">Madhyapur Thimi, Bhaktapur</h5>
+                        <br>
                         <div class="link-btn"><a href="{% url 'web:contact' %}"><span class="flaticon-next"></span>Contact Us</a></div>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom-two">
-                <div class="copy-right-text">Developed by <a href="https://tusharbohara.com.np" target="_blank">Tushar Bohara</a> | <a class="theme-color-two" href="#">ORASS Nepal.</a></div>
+                <div class="copy-right-text">Developed by <a href="https://tusharbohara.com.np" target="_blank">Tushar Bohara</a> | 
+                <a href="https://www.facebook.com/prajunlungelimagar" target="_blank">Prajun Lungeli</a>
+                <br>
+                <a class="theme-color-two" href="{% url 'web:home' %}">ORASS Nepal.</a></div>
             </div>
         </div>
         <!--Scroll to top-->
@@ -725,7 +642,7 @@
                 <div class="close-donate theme-btn"><span class="flaticon-close"></span></div>
                 <div class="sec-title text-center">
                     <h1>Donate us to achive our goal</h1>
-                    <div class="text">Beguiled and demoralized by the charms of pleasure of the moment, so by desire, <br>that they cannot foresee.</div>
+                    <div class="text">Currently we don't have our payment gateway enabled. <br>Our support team will contact you soon.<br>Thank you for your support.</div>
                 </div>
 
                 <form  action="#" class="donate-form default-form">
@@ -759,30 +676,25 @@
                         <div class="row clearfix">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Full Name">
+                                    <input type="text" name="name" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Email Address">
+                                    <input type="text" name="email" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="fname" placeholder="Contact">
+                                    <input type="text" name="contact" placeholder="Contact">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <select class="filters-selec form-controlt selectmenu" name="form_subject">
-                                        <option value="*">Payment Via</option>
-                                        <option value=".category-1">Cash</option>
-                                        <option value=".category-2">Card</option>
-                                        <option value=".category-2">Bank Transfer</option>
-                                        <option value=".category-2">Other</option>
-                                    </select>
+                                    <input type="text" name="nationality" placeholder="Nationality">
                                 </div>
                             </div>
+                            
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <button class="theme-btn btn-style-one" type="submit"><span>Donate Now</span></button>

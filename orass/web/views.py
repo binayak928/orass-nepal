@@ -34,9 +34,9 @@ def donor_page(request):
     return render(request, 'web/donor.html', context)
 
 
-def faq_page(request):
-    context = {}
-    return render(request, 'web/faq.html', context)
+# def faq_page(request):
+#     context = {}
+#     return render(request, 'web/faq.html', context)
 
 
 def about(request):
@@ -64,6 +64,9 @@ def blog_page(request):
 #     }
 #     return render(request, 'web/blog_detail.html', context)
 
+def project_page(request):
+    context={}
+    return render(request, 'web/project.html', context)
 
 class BlogDetail(DetailView):
     model = Blog
