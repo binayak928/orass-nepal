@@ -28,10 +28,11 @@ urlpatterns = [
     path('contact/', views.contact_page, name='contact'),
     path('donor/', views.donor_page, name='donor'),
 
+    path('submission/', views.save_interested_info, name='saveIntDonor'),
+
     path('staff/', Login.as_view(), name='staff'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('staff/dashboard/', views.staff_home, name='dashboard'),
-#     path('faq/', views.faq_page, name='faq'),
     path('about/', views.about, name='about'),
     path('team/', views.team_page, name='team'),
     path('blog/', views.blog_page, name='blog'),

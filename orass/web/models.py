@@ -40,3 +40,10 @@ class Event(models.Model):
 
     def __str__(self):
         return '%s %s' % (self.date, self.title)
+
+
+class InterestedDonor(models.Model):
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    phone = models.CharField(max_length=50)
+    nationality = models.CharField(max_length=70)
