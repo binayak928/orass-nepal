@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Staff - Dashboard</title>
+    <title>Staff Panel</title>
 
     <!-- Custom fonts for this template-->
     <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -55,7 +55,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item {% block dashActive %}{% endblock dashActive %}">
                 <a class="nav-link" href="{% url 'web:dashboard' %}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
@@ -70,74 +70,47 @@
                 Menu
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"-->
-<!--                    aria-expanded="true" aria-controls="collapsePages">-->
-<!--                    <i class="fas fa-fw fa-folder"></i>-->
-<!--                    <span>Pages</span>-->
-<!--                </a>-->
-<!--                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">-->
-<!--                    <div class="bg-white py-2 collapse-inner rounded">-->
-<!--                        <h6 class="collapse-header">Login Screens:</h6>-->
-<!--                        <a class="collapse-item" href="login.html">Login</a>-->
-<!--                        <a class="collapse-item" href="register.html">Register</a>-->
-<!--                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>-->
-<!--                        <div class="collapse-divider"></div>-->
-<!--                        <h6 class="collapse-header">Other Pages:</h6>-->
-<!--                        <a class="collapse-item" href="404.html">404 Page</a>-->
-<!--                        <a class="collapse-item" href="blank.html">Blank Page</a>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </li>-->
-
-            <!-- Nav Item - Charts -->
-<!--            <li class="nav-item">-->
-<!--                <a class="nav-link" href="charts.html">-->
-<!--                    <i class="fas fa-fw fa-chart-area"></i>-->
-<!--                    <span>Charts</span></a>-->
-<!--            </li>-->
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item {% block donorActive %}{% endblock donorActive %}">
                 <a class="nav-link" href="{% url 'web:view-donor' %}">
                     <i class="fas fa-fw fa-donate"></i>
                     <span>Donors</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item {% block eventActive %}{% endblock eventActive %}">
                 <a class="nav-link" href="{% url 'web:view-event' %}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Events</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            <li class="nav-item {% block blogActive %}{% endblock blogActive %}">
                 <a class="nav-link" href="{% url 'web:view-blog' %}">
                     <i class="fas fa-fw fa-blog"></i>
                     <span>Blogs</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {% block fundActive %}{% endblock fundActive %}">
                 <a class="nav-link" href="{% url 'web:view-fund' 1 %}">
                     <i class="fas fa-fw fa-money"></i>
                     <span>Funds</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {% block regActive %}{% endblock regActive %}">
                 <a class="nav-link" href="{% url 'web:view-registration' %}">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Registrations</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {% block contActive %}{% endblock contActive %}">
                 <a class="nav-link" href="{% url 'web:view-query' %}">
                     <i class="fas fa-fw fa-comments"></i>
                     <span>Contact</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {% block intActive %}{% endblock intActive %}">
                 <a class="nav-link" href="{% url 'web:view-interested' %}">
                     <i class="fas fa-fw fa-users"></i>
                     <span>Interested</span></a>
