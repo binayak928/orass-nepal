@@ -20,12 +20,12 @@
 <!-- Stylesheets -->
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
-    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/swiper.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/flaticon.css' %}" rel="stylesheet">
     <link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
     <link href="{% static 'css/animate.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom-animate.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/owl.css' %}" rel="stylesheet">
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
@@ -55,14 +55,14 @@
             <div class="auto-container">
                 <div class="wrapper-box">
                     <div class="left-content">
-                        <div class="text">Make Nepal able to reach Space... <a href="#" class="donate-box-btn">Donate Now.</a></div>
+                        <div class="text">Make Nepal able to reach Space... <a href="#" class="donate-box-btn ">Donate Now.</a></div>
                     </div>
                     <div class="right-content">
                         <ul class="contact-info">
                             <li><span class="flaticon-mail"></span><a href="mailto:info@orassnepal.com">info@orassnepal.com</a></li>
                             <li><span class="flaticon-phone"></span><a href="tel:+9779841258298">+977 984 125 8298</a></li>
                         </ul>
-                       
+                        
                     </div>
                 </div>
             </div>
@@ -87,15 +87,14 @@
                                     <div class="collapse navbar-collapse">
                                         <ul class="navigation">
                                             <li><a href="{% url 'web:home' %}">Home</a></li>
-                                            <li class="dropdown current"><a href="#">Pages</a>
+                                            <li class="dropdown"><a href="#">Pages</a>
                                                 <ul>
-                                                    <li><a href="{% url 'web:about'%}">About Us</a></li>
+                                                    <li><a href="{% url 'web:about' %}">About Us</a></li>
                                                     <li><a href="{% url 'web:team' %}">Meet Our Team</a></li>
                                                     <li><a href="{% url 'web:donor' %}">Donor</a></li>
                                                 </ul>
                                             </li>
                                             <li><a href="{% url 'web:project' %}">Project</a>
-                                                
                                             </li>
                                             <li ><a href="{% url 'web:events' %}">Events</a>
                                                 
@@ -204,7 +203,7 @@
     <section class="hidden-sidebar style-two close-sidebar">
         <div class="wrapper-box">
             <div class="hidden-sidebar-close"><span class="flaticon-cross"></span></div>
-            <div class="logo"><a href="#"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
+            <div class="logo"><a href="{% url 'web:home' %}"><img src="{% static 'images/logo-3.png' %}" alt="" style="width: 140px; height: 40px;"></a></div>
             <div class="content">
                 <div class="about-widget-four sidebar-widget">
                     <h3>To improve learning environment in primary schools</h3>
@@ -224,14 +223,7 @@
                         <h4><a href="blog-details.html">ORASS Nepal improves education infrastructure</a></h4>
                     </div>
                 </div>
-                <!-- Newsletter Widget -->
-                <div class="newsletter-widget-two">
-                    <div class="widget-title">Newsletter Subscription</div>
-                    <form action="#">
-                        <input type="email" placeholder="Enter Email Address">
-                        <button class="theme-btn btn-style-one w-100"><i class="flaticon-next"></i><span>Subscribe Us</span></button>
-                    </form>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -242,232 +234,67 @@
     <section class="page-title" style="background-image:url({% static 'images/background/bg-13.jpg' %})">
         <div class="auto-container">
             <div class="content-box">
-                <h1 style="margin-top:50px;">About Us</h1>
+                <h1 style="margin-top: 50px;">QR Donation</h1>
                 <ul class="bread-crumb">
                     <li><a class="home" href="{% url 'web:home' %}"><span class="fa fa-home"></span></a></li>
-                    <li>About Us</li>
+                    <li>QR</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- History Section -->
-    <section class="history-section">
-        <div class="auto-container">
-            <div class="description">
-                <div class="top-content text-center">
-                        <img src="{% static 'images/logo-2.png' %}" style="height: 8%;width:8%;margin-bottom: 10px;"><br><h1>Orass Nepal</h1>
-                </div>
-               <div class="text">ORASS-Nepal aims to be a hub for all the space enthusiast around the country that brings every students from various universities and institutions together for the space exploration and development activities in Nepal by being the gateway to space. We let you to grow and apply your knowledge in a better way by involving you in a challenging engineering problems. let's become capable and adaptive space leaders of tomorrow together.
-                “One More Steps Towards The Space”
-                </div>
-            </div> 
-            <div class="history-carousel">
-                <div class="swiper-container history-image">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="image">
-                                <img src="{% static 'images/garuda/g5.jpg' %}">
-                                <div class="year">2020</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="image">
-                                <img src="{% static 'images/main-slider/g3.jpg' %}" style="height: 300px;">
-                                <div class="year">2019</div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="image">
-                                <img src="{% static 'images/main-slider/g4.jpg' %}" style="height: 300px; width: 200px;">
-                                <div class="year">2019</div>
-                            </div>
-                        </div>
+    <section>
+        <div class="card shadow mb-4">
+          <div class="card-header py-3">
+            <h4 class="m-0 font-weight-bold text-primary" style="text-align: center">Donate Through QR</h4>
+          </div>
+          <div class="card-body">
+            <div class="container">
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-sm-6 text-center">
+                        <h3>Esewa</h3> 
+                        <img src="{% static 'images/qr/esewa.jpg' %}" style="height:300px;width: 300px;">
+                        <br>
+                        <h7>Acc No: 9841258298</h7>
+                    </div>
+                    <div class="col-sm-6 text-center">
+                        <h3>Khalti</h3> 
+                        <img src="{% static 'images/qr/khalti.png' %}" style="height:300px;width: 300px;">
+                        <br>
+                        <h7>Acc No: 9841258298</h7>
                     </div>
                 </div>
-                <div class="text text-center"><span style="font-size: 30px;">Projects we have done</span></div>
-                <br>
-                <div class="swiper-container history-content">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="text"><h4>Garuda</h4><br>Second rocket project of ORASS-Nepal <br>designed by the team of 30 engineering students from different universities and institutions  <br>to compete in Spaceport America Cup 2021.</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="text"><h4>The Phoenix</h4><br>First rocket project of ORASS-Nepal<br> designed to compete in Military Science and Technology Competition-II.</div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="text"><h4>Swift SAT</h4><br>Swift Sat is a can sized satellite model <br>for reading basic atmospheric data and transmitting to the ground station<br>This Project bagged 2nd position in NCIT Expo.</div>
-                        </div>
-                                                
-                    </div>
-                    <div class="swiper-nav-button">
-                        <!-- Add Arrows -->
-                        <div class="swiper-button-next"><i class="flaticon-next"></i></div>
-                        <div class="swiper-button-prev"><i class="flaticon-next"></i></div>
-                    </div>
-                </div>
-            </div>               
-        </div>
-    </section>
-
-    <!-- Funfact Section -->
-    <section class="funfacts-section-two style-two" style="background-image: url(images/background/bg-12.jpg);">
-        <div class="auto-container">
-            <div class="sec-title text-center light">
-                <h5>Our Impacts</h5>
-            </div>
-            <div class="outer-box">
-                <div class="funfact-wrapper row">
-                    <!--Column-->
-                    <div class="col-lg-4 counter-block-two wow fadeInUp" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="prefix"></span><span class="count-text" data-speed="3000" data-stop="30">0</span><span class="affix"></span>
-                            </div>
-                            <div class="text">Team <br>Members</div>
-                        </div>
-                    </div>
-                    <!--Column-->
-                    <div class="col-lg-4 counter-block-two wow fadeInUp" data-wow-delay="600ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="prefix"></span><span class="count-text" data-speed="3000" data-stop="2"></span><span class="affix"></span>
-                            </div>
-                            <div class="text">Completed<br>Projects</div>
-                        </div>
-                    </div>
-                    <!--Column-->
-                    <div class="col-lg-4 counter-block-two wow fadeInUp" data-wow-delay="300ms">
-                        <div class="inner-box">
-                            <div class="count-box">
-                                <span class="prefix"></span><span class="count-text" data-speed="3000" data-stop="1"></span><span class="affix"></span>
-                            </div>
-                            <div class="text">Awards</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section
-    <section class="whychoose-us-section">
-        <div class="auto-container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="sec-title">
-                        <h1>Why sign up as a giver on <br>the goodsoul?</h1>
-                        <div class="text">We have a deep passion for the work that we do to improve the efficiency <br>and effectiveness of the non-profit sector.</div>
-                    </div>
-                    <div class="whychoose-us-block">
-                        <div class="icon-box"><span class="flaticon-tick"></span></div>
-                        <div class="content">
-                            <h4>It’s super simple</h4>
-                            <div class="text">Indignation and dislike men who are so beguiled and demoral <br>the charms of pleasure of the moment.</div>
-                        </div>
-                    </div>
-                    <div class="whychoose-us-block">
-                        <div class="icon-box"><span class="flaticon-tick"></span></div>
-                        <div class="content">
-                            <h4>It’s super simple</h4>
-                            <div class="text">Indignation and dislike men who are so beguiled and demoral <br>the charms of pleasure of the moment.</div>
-                        </div>
-                    </div>
-                    <div class="link-btn"><a href="#" class="theme-btn btn-style-one"><span>Let's Start</span></a></div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="image-block">
-                        <img src="images/resource/image-18.jpg" alt="">
-                        <div class="contact-info-two">
-                            <h5>Need assitant for <br>join with us?</h5>
-                            <div class="icon-box"><span class="flaticon-phone-1"></span></div>
-                            <div class="phone-number"><a href="tel:+9779841258298">+977 984 125 8298</a></div>
-                        </div>
-                        <div class="logo-box"><div class="image wow zoomIn" data-wow-delay="500ms"><img src="images/resource/logo-icon.png" alt=""></div></div>
-                        <div class="video-box"><img src="images/resource/image-19.jpg" alt=""><a href="https://www.youtube.com/watch?v=nfP5N9Yc72A&amp;t=28s" class="overlay-link lightbox-image video-fancybox video-btn"><span class="flaticon-multimedia-1"></span></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    
-    <!-- Client section -->
-    <section class="client-section style-three">
-        <div class="auto-container">
-            <div class="sec-title text-center">
-                <h1>Who contributed with us?</h1>
-                <div class="text">Thank you for your contribution.</div>
-            </div>
-            <div class="sponsors-carousel owl-carousel owl-theme owl-nav-none owl-dots-none">
-                <div class="image" data-toggle="tooltip" data-placement="top" title="National Innovation Centre"><a href="https://nicnepal.org/" target="_blank"><img src="{% static 'images/support/nic.png' %}"></a></div>
-                <div class="image" data-toggle="tooltip" data-placement="top" title="Kathmandu University"><a href="https://www.ku.edu.np/" target="_blank"><img src="{% static 'images/support/ku.png' %}" style="height: 110px;width: 110px;"></a></div>
-                <div class="image" data-toggle="tooltip" data-placement="top" title="Thapathali Campus"><a href="http://tcioe.edu.np/" target="_blank"><img src="{% static 'images/support/tc.png' %}" alt=""></a></div>
-                <div class="image" data-toggle="tooltip" data-placement="top" title="Nepal Engineers' Association"><a href="http://neanepal.org.np/" target="_blank"><img src="{% static 'images/support/nea.png' %}" style="height: 110px;width: 110px;"></a></div>
-                <div class="image" data-toggle="tooltip" data-placement="top" title="Orion Space"><a href="https://orionspace.com.np/" target="_blank"><img src="{% static 'images/support/orion.png' %}" alt=""></a></div>
-            </div>
-            <div class="text-two text-center">To learn about becoming a partner, contact us at: <a href="mailto:info@orassnepal.com">info@orassnepal.com</a> or <a href="tel:+9779841258298">+977 984 125 8298</a></div>
-        </div>
-    </section>
-
-    
-
-    
-    <!-- Main Footer -->
-    <footer class="main-footer">
-        <div class="auto-container">
-            <div class="widget-wrapper">
                 <div class="row">
-                    <!-- Contact Widget -->
-                    <div class="col-lg-3 col-md-6 contact-widget footer-widget">
-                        <h4 class="widget-title">Contact</h4>
-                        <ul>
-                            <li>Madhyapur Thimi <br> Bhaktapur</li>
-                            <li><a href="mailto:support@orassnepal.com">support@orassnepal.com </a></li>
-                        </ul>   
-                        <h3><a href="tel:+9779841258298">+977 984 125 8298</a></h3>                 
+                    <div class="col-lg-12 text-center card-header py-3">
+                        <h1>You can also donate through</h1>
                     </div>
-                    <!-- About Widget -->
-                    <div class="col-lg-3 col-md-6 about-widget footer-widget">
-                        <h4 class="widget-title">About</h4>
-                        <ul>
-                            <li><a href="{% url 'web:donor' %}">Donors</a></li>
-                            <li><a href="{% url 'web:team' %}">Our Team</a></li>
-                            <li><a href="{% url 'web:blog' %}">Blogs</a></li>
-                            <li><a href="{% url 'web:project' %}">Project</a></li>
-                        </ul>                
-                    </div>
-                    <!-- Link Widget -->
-                    <div class="col-lg-3 col-md-6 link-widget footer-widget">
-                        <h4 class="widget-title">Quick Link</h4>
-                        <ul>
-                            <li><a class="donate-box-btn">Donate Now</a></li>
-                            <li><a href="{% url 'web:contact' %}">Become a Volunteer</a></li>
-                            <li><a href="{% url 'web:contact' %}">Contact Us</a></li>
-                        </ul>               
+                    <div class="row" style="margin:10px">
+                        <div class="col-lg-3 text-center" style="padding: 5px;"> 
+                            <a href="https://gf.me/u/y6zfb6 " target="_blank">
+                                <img src="{% static 'images/qr/go.png' %}" style="height: 150px;width: 550px;">
+                            </a>
+                        </div>
+                        <div class="col-lg-4 text-center" style="margin-left:15%;"> 
+                            
+                                <img src="{% static 'images/qr/mb.png' %}" style="height: 150px;width: 550px;">
+                            
+                        </div>
+                        <div class="col-lg-3 text-center"> 
+                            <div class="text text-left">
+                                <h4>Bank Details</h4><br> 
+                                Name: Ashwinee Kharel<br>
+                                Branch: Kantipath<br>
+                                Account No: 0010050476032
+                            </div>
+                        </div>
                     </div>
                    
                 </div>
-            </div>                
-            <div class="footer-bottom">
-                <div class="left-content">
-                    <div class="icon"><img src="images/resource/logo-icon.png" alt=""></div>
-                    <div class="copyright-text"><br>Designed By <a href="#">Tushar Bohra | Prajun Lungeli Magar</a></div>
-                </div>
-                <div class="right-content">
-                    <ul class="social-icon-three">
-                        <li><a href="https://www.facebook.com/orassnepal" target="_blank"><span class="fa fa-facebook"></span></a></li>
-                        <li><a href="https://twitter.com/orassnepal" target="_blank"><span class="fa fa-twitter"></span></a></li>
-                        <li><a href="https://www.instagram.com/orassnepal/" target="_blank"><span class="fa fa-instagram"></span></a></li>
-                    </ul>
-                </div>
             </div>
+            </div>
+          </div>
         </div>
-    </footer>
-
-    <!--Scroll to top-->
-    <div class="scroll-to-top scroll-to-target" data-target="html"><span class="icon flaticon-arrow"></span></div>
-
+    </section>
     <div id="donate-popup" class="donate-popup style-two">
 
         <div class="popup-overlay"></div>
@@ -550,6 +377,8 @@
         </div>
     </div>
 
+
+
 </div>
 <!--End pagewrapper-->
 
@@ -590,7 +419,6 @@
     })
 
 </script>
-
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/TweenMax.min.js' %}"></script>
