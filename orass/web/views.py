@@ -92,6 +92,11 @@ def project_page(request):
     return render(request, 'web/project.html', context)
 
 
+def qr_page(request):
+    context = {}
+    return render(request, 'web/qr.html', context)
+
+
 class BlogDetail(DetailView):
     model = Blog
     template_name = 'web/blog_detail.html'

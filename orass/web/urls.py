@@ -54,6 +54,7 @@ urlpatterns = [
     path('blog/<int:pk>', BlogDetail.as_view(), name='blog-single'),
     path('project/', views.project_page, name='project'),
     path('events/', views.event_page, name='events'),
+    path('qr/', views.qr_page, name='qr'),
     path('events/<int:pk>', EventDetail.as_view(), name='event-details'),
     path('garuda/', views.garuda_page, name='garuda'),
     path('phoenix/', views.phoenix_page, name='phoenix'),
