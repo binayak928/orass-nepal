@@ -398,28 +398,28 @@
                         <div class="row clearfix">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Full Name">
+                                    <input type="text" id="name" placeholder="Full Name">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="email" placeholder="Email Address">
+                                    <input type="text" id="email" placeholder="Email Address">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="contact" placeholder="Contact">
+                                    <input type="text" id="phone" placeholder="Contact">
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group">
-                                    <input type="text" name="nationality" placeholder="Nationality">
+                                    <input type="text" id="nationality" placeholder="Nationality">
                                 </div>
                             </div>
                             
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group d-flex align-items-center justify-content-between">
-                                    <button class="theme-btn btn-style-one" type="submit"><span>Donate Now</span></button>
+                                    <button class="theme-btn btn-style-one" id="save-info" type="submit"><span>Donate Now</span></button>
                                     <div class="checkbox">
                                         <label>
                                             <input type="checkbox">
@@ -444,6 +444,39 @@
 
 <!-- JS -->
 <script src="{% static 'js/jquery.js' %}"></script>
+<script>
+    $(document).ready(function(){
+        $('#save-info').on('click', function (){
+            var name = $('#name').val();
+            var email = $('#email').val();
+            var phone = $('#phone').val();
+            var nationality = $('#nationality').val();
+
+            var form1 = new FormData();
+            form1.append("name", name);
+            form1.append("email", email);
+            form1.append("phone", phone);
+            form1.append("nationality", nationality);
+
+            $.ajax({
+                url : "{% url 'web:saveIntDonor' %}",
+                method : "POST",
+                timeout : 0,
+                processData: false,
+                mimeType : "multipart/form-data",
+                contentType: false,
+                data : form1,
+                success: function(json){
+                    console.log("post deletion successful");
+                },
+                error : function (json){
+                    console.log("not succeeded");
+                }
+            });
+        });
+    })
+
+</script>
 <script src="{% static 'js/popper.min.js' %}"></script>
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 <script src="{% static 'js/TweenMax.min.js' %}"></script>
