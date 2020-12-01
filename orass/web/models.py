@@ -5,8 +5,12 @@ from django.utils import timezone
 
 class DonationsDemo(models.Model):
     name = models.CharField(max_length=100)
-    date = models.DateField()
+    date = models.DateField(default=timezone.now)
     amt = models.CharField(max_length=255)
+    country = models.CharField(max_length=100)
+    donatedVia = models.CharField(max_length=150)
+    phone = models.IntegerField(null=True, blank=True)
+    email = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return '%s %s %s' % (self.name, self.date, self.amt)

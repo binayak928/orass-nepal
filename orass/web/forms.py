@@ -15,6 +15,10 @@ class DonorRegistrationForm(forms.Form):
         )
     )
     amt = forms.CharField(label='Amount')
+    phone = forms.IntegerField(label='Phone')
+    email = forms.CharField(label='Email')
+    country = forms.CharField(label='Country')
+    donatedVia = forms.CharField(label='Donated Via')
 
 
 class BlogCreationForm(forms.Form):

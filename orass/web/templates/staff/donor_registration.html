@@ -30,28 +30,67 @@
                     {% render_field form.name class="form-control" placeholder=form.name.label %}
                 </div>
               <div class="row">
-                <div class="col-md-6 mb-3">
-                  <small class="text-danger">
-                    {{ form.date.errors }}
-                  </small>
-                  <label>Donation Date:</label>
-                  {{ form.date|add_class:'form-control' }}
-                </div>
 
                 <div class="col-md-6 mb-3">
                   <small class="text-danger">
-                    {{ form.amt.errors }}
+                    {{ form.phone.errors }}
                   </small>
-                  <label>Donation Amount:</label>
-                  {% render_field form.amt class="form-control" placeholder=form.amt.label %}
+                  <label>Phone:</label>
+                  {% render_field form.phone class="form-control" placeholder=form.phone.label %}
                 </div>
+
+                  <div class="col-md-6 mb-3">
+                      <small class="text-danger">
+                        {{ form.email.errors }}
+                      </small>
+                      <label>Email:</label>
+                      {% render_field form.email class="form-control" placeholder=form.email.label %}
+                  </div>
               </div>
-
-
             </div>
           </div>
+              <div class="card" style="margin-top: 20px">
+                  <div class="card-header">
+                     <h5><center>Donation Details</center></h5>
+                  </div>
+
+                  <div class="card-body">
+                      <div class="row">
+                          <div class="col-md-6 mb-3">
+                                 <small class="text-danger">
+                                 {{ form.date.errors }}
+                                </small>
+                                <label>Donation Date:</label>
+                                {{ form.date|add_class:'form-control' }}
+                          </div>
+                          <div class="col-md-6 mb-3">
+                                 <small class="text-danger">
+                                 {{ form.amt.errors }}
+                                </small>
+                                <label>Donation Amount:</label>
+                                {% render_field form.amt class="form-control" placeholder=form.amt.label %}
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6 mb-3">
+                              <small class="text-danger">
+                                  {{ form.country.errors }}
+                              </small>
+                              <label>Country:</label>
+                              {% render_field form.country class="form-control" placeholder=form.country.label %}
+                          </div>
+                          <div class="col-md-6 mb-3">
+                              <small class="text-danger">
+                                  {{ form.donatedVia.errors }}
+                              </small>
+                              <label>Donated Via:</label>
+                              {% render_field form.donatedVia class="form-control" placeholder=form.donatedVia.label %}
+                          </div>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="form-group" style="margin-top: 20px; margin-left: 20px;">
+          <div class="form-group" style="margin-top: 20px;">
             <input class="btn btn-primary" type="submit" value="Register">
             <a href="{% url 'web:view-donor' %}" class="btn btn-secondary">Cancel</a>
           </div>

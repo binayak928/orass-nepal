@@ -18,61 +18,49 @@
           <div class="card-header"><h5><center>Personal Details</center></h5></div>
           <div class="card-body">
             <div class="row">
-              <div class="col-md-6 mb-3">
+              <div class="col-md-12 mb-3">
                   {{ form.name.errors }}
-                  <label>First Name:</label>
+                  <label>Donor Name:</label>
                   {% render_field form.name class="form-control" placeholder=form.name.label %}
               </div>
-
-<!--              <div class="col-md-6 mb-3">-->
-<!--                  {{ form.last_name.errors }}-->
-<!--                  <label>Last Name:</label>-->
-<!--                  {% render_field form.last_name class="form-control" placeholder=form.last_name.label %}-->
-<!--              </div>-->
-            </div>
-
-            <div class="row">
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.gender.errors }}-->
-<!--                  <label>{{form.gender.label}}:</label>-->
-<!--                  {{ form.gender|add_class:'form-control' }}-->
-<!--              </div>-->
-
-              <div class="col-md-3">
-                  <label>{{form.date.label}}:</label>
-                  {{ form.date|add_class:'form-control' }}
-              </div>
-
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.blood_group.errors }}-->
-<!--                  <label>{{form.blood_group.label}}:</label>-->
-<!--                  {{ form.blood_group|add_class:'form-control' }}-->
-<!--              </div>-->
-
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.marital_status.errors }}-->
-<!--                  <label>{{form.marital_status.label}}:</label>-->
-<!--                  {{ form.marital_status|add_class:'form-control' }}-->
-<!--              </div>-->
+                <div class="col-md-6 mb-3">
+                  {{ form.phone.errors }}
+                  <label>Phone:</label>
+                  {% render_field form.phone class="form-control" placeholder=form.phone.label %}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.email.errors }}
+                  <label>Email:</label>
+                  {% render_field form.email class="form-control" placeholder=form.email.label %}
+                </div>
             </div>
           </div>
         </div>
 
         <div class="card" style="margin-top: 20px">
-          <div class="card-header"><h5><center>Contact Details</center> </h5></div>
+          <div class="card-header"><h5><center>Donation Details</center> </h5></div>
           <div class="card-body">
             <div class="row">
               <div class="col-md-6 mb-3">
-                  {{ form.amt.errors }}
-                  <label>{{form.amt.label}}:</label>
-                  {% render_field form.amt class="form-control" placeholder=form.amt.label %}
+                  {{ form.date.errors }}
+                  <label>Donation Date:</label>
+                  {% render_field form.date class="form-control" placeholder=form.date.label %}
               </div>
-
-<!--              <div class="col-md-6 mb-3">-->
-<!--                  {{ form.email.errors }}-->
-<!--                  <label>{{form.email.label}}:</label>-->
-<!--                  {% render_field form.email class="form-control" placeholder=form.email.label %}-->
-<!--              </div>-->
+                <div class="col-md-6 mb-3">
+                  {{ form.amt.errors }}
+                  <label>Donation Amount:</label>
+                  {% render_field form.amt class="form-control" placeholder=form.date.label %}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.country.errors }}
+                  <label>Country:</label>
+                  {% render_field form.country class="form-control" placeholder=form.country.label %}
+                </div>
+                <div class="col-md-6 mb-3">
+                  {{ form.donatedVia.errors }}
+                  <label>Donated Via:</label>
+                  {% render_field form.donatedVia class="form-control" placeholder=form.donatedVia.label %}
+                </div>
             </div>
           </div>
         </div>

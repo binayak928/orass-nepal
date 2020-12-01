@@ -2,41 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/web/media/blog/bg-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/media/blog/logo-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/media/events/Check_Event_Np1qlSI.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/media/events/Check_Event_obvMTVC.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/media/events/bg-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/media/events/logo-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0011_auto_20201201_1447.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/migrations/0012_eventparticipation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/confirm_delete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/fund_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/query_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/registration_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/update_fund.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/update_registration_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_interested.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_queries.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0013_auto_20201201_2059.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0014_auto_20201201_2102.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/registration/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/blog_creation.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/blog_creation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/update_blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/update_blog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/update_event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/update_event_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_blog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/donor_registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/donor_registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/update_donor_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/update_donor_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_donor.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_donor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/templates/staff/view_donor_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_donor_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_event_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/blog_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/event.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/templates/web/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/registration.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

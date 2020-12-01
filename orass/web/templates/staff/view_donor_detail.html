@@ -32,12 +32,6 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-md-3">
-                            <label>Gender:</label>
-                            <input class="form-control" type="text" placeholder="gender" readonly>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -55,6 +49,10 @@
                             <label>Donation Amount:</label>
                             <input class="form-control" type="text" placeholder="{{ object.amt }}" readonly>
                         </div>
+                        <div class="col-md-12 mb-3">
+                            <label>Donated Via:</label>
+                            <input class="form-control" type="text" placeholder="{{ object.donatedVia }}" readonly>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,12 +64,12 @@
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label>Contact Number:</label>
-                            <input class="form-control" type="text" placeholder="9xxxxxxxxx" readonly>
+                            <input class="form-control" type="text" placeholder="{{ object.phone }}" readonly>
                         </div>
 
                         <div class="col-md-6 mb-3">
                             <label>Email:</label>
-                            <input class="form-control" type="text" placeholder="email" readonly>
+                            <input class="form-control" type="text" placeholder="{{ object.email }}" readonly>
                         </div>
                     </div>
                 </div>
@@ -81,25 +79,25 @@
                 <div class="card-header"><h5><center>Address Details</center></h5></div>
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-xs-6 col-sm-3">
+                        <div class="col-md-12 mb-3">
                             <label>Country:</label>
-                            <input class="form-control" type="text" placeholder="country" readonly>
+                            <input class="form-control" type="text" placeholder="{{ object.country }}" readonly>
                         </div>
 
-                        <div class="col-xs-6 col-sm-3">
-                            <label>State:</label>
-                            <input class="form-control" type="text" placeholder="state" readonly>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-3">
-                            <label>District:</label>
-                            <input class="form-control" type="text" placeholder="district" readonly>
-                        </div>
-
-                        <div class="col-xs-6 col-sm-3">
-                            <label>City:</label>
-                            <input class="form-control" type="text" placeholder="city" readonly>
-                        </div>
+{#                        <div class="col-xs-6 col-sm-3">#}
+{#                            <label>State:</label>#}
+{#                            <input class="form-control" type="text" placeholder="state" readonly>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-xs-6 col-sm-3">#}
+{#                            <label>District:</label>#}
+{#                            <input class="form-control" type="text" placeholder="district" readonly>#}
+{#                        </div>#}
+{##}
+{#                        <div class="col-xs-6 col-sm-3">#}
+{#                            <label>City:</label>#}
+{#                            <input class="form-control" type="text" placeholder="city" readonly>#}
+{#                        </div>#}
                     </div>
                 </div>
             </div>

@@ -156,6 +156,10 @@ def donor_registration_view(request):
             donation = DonationsDemo(name=data['name'],
                                      date=data['date'],
                                      amt=data['amt'],
+                                     phone=data['phone'],
+                                     email=data['email'],
+                                     country=data['country'],
+                                     donatedVia=data['donatedVia'],
                                      )
             donation.save()
             return redirect('web:view-donor')
@@ -189,7 +193,11 @@ class DonorUpdateView(UpdateView):
     model = DonationsDemo
     fields = ('name',
               'date',
-              'amt'
+              'amt',
+              'phone',
+              'donatedVia',
+              'email',
+              'country'
               )
     template_name = 'staff/update_donor_detail.html'
     context_object_name = 'donor'
