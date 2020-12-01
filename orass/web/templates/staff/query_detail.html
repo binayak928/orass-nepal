@@ -1,0 +1,68 @@
+{% extends 'staff/base.html' %}
+
+
+{% block content %}
+
+<!-- Begin Page Content -->
+
+  <!-- Page Heading -->
+<h1 class="h3 mb-4 text-gray-800">Donor Information</h1>
+
+<div class="card mb-12">
+
+    <div class="card-header">
+      <h3><center>Query Information</center> </h3>
+    </div>
+
+    <div class="card-body">
+        <div style="margin: 0 20px 0 20px;">
+
+            <div class="card" style="margin-top: 20px">
+                <div class="card-header"><h5><center>Query Details</center></h5></div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Full Name:</label>
+                            <input class="form-control" type="text" placeholder="{{ object.name }}" readonly>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <label>Phone:</label>
+                            <input class="form-control" type="text" placeholder="{{ query.phone }}" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12 mb-3">
+                            <label>Email:</label>
+                            <input class="form-control" type="text" placeholder="{{ query.email }}" readonly>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>Query Date:</label>
+                            <input class="form-control" type="text" placeholder="{{ query.date }}" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>Subject:</label>
+                            <input class="form-control" type="text" placeholder="{{ query.subject }}" readonly>
+                        </div>
+                        <div class="col-md-12">
+                            <label>Message:</label>
+                            <textarea class="form-control" type="textarea" placeholder="{{ query.message }}" rows="5" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="form-group" style="margin-top: 20px">
+                <a href="{% url 'web:view-query' %}" class="btn btn-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+

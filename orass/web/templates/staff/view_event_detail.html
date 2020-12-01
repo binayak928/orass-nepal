@@ -87,7 +87,7 @@
                             <label>Event Banner:</label>
                             <img src="/media/{{ event.picture }}">
                             <input class="form-control" type="text" placeholder="{{ event.picture }}" readonly></input>
-                        </div
+                        </div>
                     </div>
                 </div>
             </div>
@@ -95,6 +95,7 @@
         </div>
         <div class="form-group" style="margin-top: 20px">
             <a href="{% url 'web:update-event' event.id %}" class="btn btn-primary">Update</a>
+            <a href="{% url 'web:delete-event' event.id%}" class="btn btn-danger">Delete</a>
             <a href="{% url 'web:view-event' %}" class="btn btn-secondary">Back</a>
         </div>
     </div>

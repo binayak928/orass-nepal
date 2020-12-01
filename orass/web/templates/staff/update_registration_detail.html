@@ -1,0 +1,85 @@
+{% extends 'staff/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="card mb-12">
+
+    <div class="card-header">
+        <h3><center>Registry Update</center> </h3>
+    </div>
+
+    <div class="card-body">
+      <form method="post" enctype="multipart/form-data" style="margin: 0 20px 0 20px;">
+        {% csrf_token %}
+        {{ form.non_field_errors }}
+
+        <div class="card" style="margin-top: 20px">
+          <div class="card-header"><h5><center>Participant Details</center></h5></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12 mb-3">
+                  {{ form.organizer.errors }}
+                  <label>Participant Name:</label>
+                  {% render_field form.name class="form-control" placeholder=form.name.label %}
+              </div>
+                <div class="col-md-6 mb-3">
+                    {{ form.phone.errors }}
+                    <label>Phone</label>
+                    {% render_field form.phone class="form-control" placeholder=form.phone.label %}
+                </div>
+                <div class="col-md-6 mb-3">
+                    {{ form.email.errors }}
+                    <label>Email</label>
+                    {% render_field form.email class="form-control" placeholder=form.email.label %}
+                </div>
+            </div>
+          </div>
+        </div>
+
+          <div class="card" style="margin-top: 20px">
+              <div class="card-header"><h5><center>Location Details</center></h5></div>
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-12 mb-3">
+                      {{ form.address.errors }}
+                      <label>Address</label>
+                      {% render_field form.address class="form-control" placeholder=form.address.label %}
+                  </div>
+                </div>
+              </div>
+          </div>
+
+        <div class="card" style="margin-top: 20px">
+          <div class="card-header"><h5><center>Event Details</center> </h5></div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                  {{ form.title.errors }}
+                  <label>Event Title:</label>
+                  {% render_field form.title class="form-control" placeholder=form.title.label %}
+              </div>
+              <div class="col-md-6 mb-3">
+                  {{ form.eventDate.errors }}
+                  <label>Event Date:</label>
+                  {% render_field form.eventDate class="form-control" placeholder=form.eventDate.label %}
+              </div>
+              <div class="col-md-12 mb-3">
+                  {{ form.message.errors }}
+                  <label>Message:</label>
+                  {% render_field form.message class="form-control" placeholder=form.message.label %}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-top: 20px" >
+            <input class="btn btn-primary" type="submit" value="Update">
+            <a href="{% url 'web:registry-detail' participant.id %}" class="btn btn-secondary">Cancel</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+{% endblock content %}

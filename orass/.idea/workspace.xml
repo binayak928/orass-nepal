@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="" />
+    <list default="true" id="06306efe-6515-4807-a291-09edbc3f544d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/web/media/blog/bg-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/media/blog/logo-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/media/events/Check_Event_Np1qlSI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/media/events/Check_Event_obvMTVC.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/media/events/bg-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/media/events/logo-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0011_auto_20201201_1447.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/migrations/0012_eventparticipation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/confirm_delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/fund_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/query_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/registration_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/update_fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/update_registration_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_interested.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_queries.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/staff/view_registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/blog_creation.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/blog_creation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/update_blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/update_blog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/update_event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/update_event_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_blog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_donor_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_donor_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/staff/view_event_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/staff/view_event_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/blog_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/blog_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/event.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/event.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/templates/web/registration.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/templates/web/registration.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/views.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,15 +49,23 @@
   </component>
   <component name="JupyterTrust" id="44af501a-65d2-4f53-8fb7-67b280a43974" />
   <component name="ProjectId" id="1julpZmH2Vc9Ez81nETRPjJoF1W" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GITCLONE\work\orassNepal\orass-nepal\orass\web\media\blog" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="orass" type="Python.DjangoServer" factoryName="Django server">
@@ -62,5 +107,14 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="292" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606814318938">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="292" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606814318938" />
   </component>
 </project>

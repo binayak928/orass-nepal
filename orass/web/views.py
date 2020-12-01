@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy, reverse
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import ListView, DetailView, UpdateView
+from django.views.generic import ListView, DetailView, UpdateView, DeleteView
 from .forms import DonorRegistrationForm, BlogCreationForm, EventCreationForm
-from .models import DonationsDemo, Blog, Event, InterestedDonor
+from .models import DonationsDemo, Blog, Event, InterestedDonor, ContactForm, HomePageFund, EventParticipation
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import views as auth_views
 
@@ -13,22 +13,42 @@ from django.contrib.auth import views as auth_views
 
 
 def home_page(request):
-    context = {}
+    all_details = HomePageFund.objects.all()
+    context = {
+        "details": all_details
+    }
     return render(request, 'web/base.html', context)
 
 
 @csrf_exempt
 def save_interested_info(request):
     if request.method == "POST":
-        print(request.POST["name"])
-        print(request.POST["email"])
-        print(request.POST["phone"])
-        print(request.POST["nationality"])
-
-        info = InterestedDonor(name=request.POST["name"], email=request.POST["email"], phone=request.POST["phone"], nationality=request.POST["nationality"])
+        info = InterestedDonor(name=request.POST["name"], email=request.POST["email"], phone=request.POST["phone"],
+                               nationality=request.POST["nationality"])
 
         info.save()
         return redirect('web:home')
+
+
+@csrf_exempt
+def save_query(request):
+    if request.method == "POST":
+        query = ContactForm(name=request.POST["name"], email=request.POST["email"], phone=request.POST["phone"],
+                            subject=request.POST["subject"], message=request.POST["message"])
+
+        query.save()
+        return redirect('web:contact')
+
+
+@csrf_exempt
+def save_registry(request):
+    if request.method == "POST":
+        query = EventParticipation(name=request.POST["name"], email=request.POST["email"], phone=request.POST["phone"],
+                                   address=request.POST["address"], message=request.POST["message"],
+                                   title=request.POST["title"], eventDate=request.POST["eventDate"],)
+
+        query.save()
+        return redirect('web:events')
 
 
 def test_page(request):
@@ -49,11 +69,6 @@ def donor_page(request):
     return render(request, 'web/donor.html', context)
 
 
-# def faq_page(request):
-#     context = {}
-#     return render(request, 'web/faq.html', context)
-
-
 def about(request):
     context = {}
     return render(request, 'web/aboutus.html', context)
@@ -65,23 +80,17 @@ def team_page(request):
 
 
 def blog_page(request):
-    all_blogs = Blog.objects.all()
+    all_blogs = Blog.objects.all().order_by('-post_date')
     context = {
         "blogs": all_blogs
     }
     return render(request, 'web/blog.html', context)
 
 
-# def blog_detail(request):
-#     all_blogs = Blog.objects.all()
-#     context = {
-#         "blogs": all_blogs
-#     }
-#     return render(request, 'web/blog_detail.html', context)
-
 def project_page(request):
-    context={}
+    context = {}
     return render(request, 'web/project.html', context)
+
 
 class BlogDetail(DetailView):
     model = Blog
@@ -90,7 +99,7 @@ class BlogDetail(DetailView):
 
 
 def event_page(request):
-    all_events = Event.objects.all()
+    all_events = Event.objects.all().order_by('-date')
     context = {
         "events": all_events
     }
@@ -98,18 +107,19 @@ def event_page(request):
 
 
 def garuda_page(request):
-    context={}
+    context = {}
     return render(request, 'web/garuda.html', context)
 
 
 def phoenix_page(request):
-    context={}
+    context = {}
     return render(request, 'web/pheonix.html', context)
 
 
 def swiftSat_page(request):
-    context={}
+    context = {}
     return render(request, 'web/sat.html', context)
+
 
 class EventDetail(DetailView):
     model = Event
@@ -183,6 +193,12 @@ class DonorUpdateView(UpdateView):
         return reverse('web:view-donor')
 
 
+class DonorDeleteView(DeleteView):
+    model = DonationsDemo
+    template_name = 'staff/confirm_delete.html'
+    success_url = reverse_lazy('web:view-donor')
+
+
 class EventList(ListView):
     model = Event
     template_name = 'staff/view_event.html'
@@ -207,13 +223,19 @@ class EventUpdateView(UpdateView):
               'organizer',
               'phone',
               'email',
-              'picture'
+              'picture',
               )
     template_name = 'staff/update_event_detail.html'
     context_object_name = 'event'
 
     def get_success_url(self):
         return reverse('web:view-event')
+
+
+class EventDeleteView(DeleteView):
+    model = Event
+    template_name = 'staff/confirm_delete.html'
+    success_url = reverse_lazy('web:view-event')
 
 
 class BlogList(ListView):
@@ -234,7 +256,8 @@ class BlogUpdateView(UpdateView):
               'post_date',
               'title',
               'category',
-              'body'
+              'body',
+              'picture',
               )
     template_name = 'staff/update_blog_detail.html'
     context_object_name = 'blog'
@@ -243,10 +266,16 @@ class BlogUpdateView(UpdateView):
         return reverse('web:view-blog')
 
 
+class BlogDeleteView(DeleteView):
+    model = Blog
+    template_name = 'staff/confirm_delete.html'
+    success_url = reverse_lazy('web:view-blog')
+
+
 @login_required(login_url="/staff")
 def blog_creation_view(request):
     if request.method == "POST":
-        form = BlogCreationForm(request.POST)
+        form = BlogCreationForm(request.POST, request.FILES)
         if form.is_valid():
             data = form.cleaned_data
             new_blog = Blog(author=data['author'],
@@ -254,6 +283,7 @@ def blog_creation_view(request):
                             title=data['title'],
                             category=data['category'],
                             body=data['body'],
+                            picture=data['picture']
                             )
             new_blog.save()
             return redirect('web:view-blog')
@@ -286,3 +316,69 @@ def event_creation_view(request):
     else:
         form = EventCreationForm()
     return render(request, 'staff/event_creation.html', {'form': form})
+
+
+class FundUpdate(UpdateView):
+    model = HomePageFund
+    fields = ('raised',
+              'goal',
+              'percentage'
+              )
+    template_name = 'staff/update_fund.html'
+    context_object_name = 'fund'
+
+    def get_success_url(self):
+        return reverse('web:dashboard')
+
+
+class InterestedList(ListView):
+    model = InterestedDonor
+    template_name = 'staff/view_interested.html'
+    context_object_name = 'donors'
+
+
+class QueryList(ListView):
+    model = ContactForm
+    template_name = 'staff/view_queries.html'
+    context_object_name = 'queries'
+
+
+class QueryDetail(DetailView):
+    model = ContactForm
+    template_name = 'staff/query_detail.html'
+    context_object_name = 'query'
+
+
+class RegistrationList(ListView):
+    model = EventParticipation
+    template_name = 'staff/view_registration.html'
+    context_object_name = 'participants'
+
+
+class RegistryDetail(DetailView):
+    model = EventParticipation
+    template_name = 'staff/registration_detail.html'
+    context_object_name = 'participant'
+
+
+class RegistryDeleteView(DeleteView):
+    model = EventParticipation
+    template_name = 'staff/confirm_delete.html'
+    success_url = reverse_lazy('web:view-registration')
+
+
+class RegistryUpdateView(UpdateView):
+    model = EventParticipation
+    fields = ('eventDate',
+              'address',
+              'message',
+              'name',
+              'phone',
+              'email',
+              'title',
+              )
+    template_name = 'staff/update_registration_detail.html'
+    context_object_name = 'participant'
+
+    def get_success_url(self):
+        return reverse('web:view-registration')

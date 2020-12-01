@@ -384,7 +384,9 @@
                                     <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
                                         <div class="inner">
                                             <div class="bar">
-                                                <div class="bar-innner"><div class="bar-fill" data-percent="60"><div class="percent"></div></div></div>
+                                                {% for detail in details %}
+                                                <div class="bar-innner"><div class="bar-fill" data-percent="{{ detail.percentage }}"><div class="percent"></div></div></div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -393,8 +395,10 @@
                                     <h4><a href="cause-details.html">Recent Project (Garuda)</a></h4>
                                     <div class="text">Help us to reach <br>space </div>
                                     <ul class="info-box">
-                                        <li><a href="#"><span>Raised:</span> <br>&#8377;72000</a></li>
-                                        <li><a href="#"><span>Goal:</span> <br>&#8377;100000</a></li>
+                                        {% for detail in details %}
+                                        <li><a href="#"><span>Raised:</span> <br>&#8377; {{ detail.raised }}</a></li>
+                                        <li><a href="#"><span>Goal:</span> <br>&#8377; {{ detail.goal }}</a></li>
+                                        {% endfor %}
                                     </ul>
                                     <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                 </div>
@@ -416,7 +420,9 @@
                                     <div class="progress-box wow fadeInRight" data-wow-delay="100ms" data-wow-duration="1500ms">
                                         <div class="inner">
                                             <div class="bar">
-                                                <div class="bar-innner"><div class="bar-fill" data-percent="60"><div class="percent"></div></div></div>
+                                                {% for detail in details %}
+                                                <div class="bar-innner"><div class="bar-fill" data-percent="{{ detail.percentage }}"><div class="percent"></div></div></div>
+                                                {% endfor %}
                                             </div>
                                         </div>
                                     </div>
@@ -425,8 +431,10 @@
                                     <h4><a href="cause-details.html">Make Garuda Fly</a></h4>
                                     <div class="text">Your small donation can help<br>Garuda fly</div>
                                     <ul class="info-box">
-                                        <li><a href="#"><span>Raised:</span> <br>&#8377; 92000</a></li>
-                                        <li><a href="#"><span>Goal:</span> <br>&#8377; 120000</a></li>
+                                        {% for detail in details %}
+                                        <li><a href="#"><span>Raised:</span> <br>&#8377; {{ detail.raised }}</a></li>
+                                        <li><a href="#"><span>Goal:</span> <br>&#8377; {{ detail.goal }}</a></li>
+                                        {% endfor %}
                                     </ul>
                                     <div class="donate-btn"><a href="#" class="theme-btn btn-style-eight donate-box-btn"><span>Donate Now</span></a></div>
                                 </div>

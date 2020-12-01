@@ -10,7 +10,7 @@
     </div>
 
     <div class="card-body">
-      <form method="post" style="margin: 0 20px 0 20px;">
+      <form method="post" enctype="multipart/form-data" style="margin: 0 20px 0 20px;">
         {% csrf_token %}
         {{ form.non_field_errors }}
 
@@ -23,38 +23,7 @@
                   <label>Author Name:</label>
                   {% render_field form.author class="form-control" placeholder=form.author.label %}
               </div>
-
-<!--              <div class="col-md-6 mb-3">-->
-<!--                  {{ form.last_name.errors }}-->
-<!--                  <label>Last Name:</label>-->
-<!--                  {% render_field form.last_name class="form-control" placeholder=form.last_name.label %}-->
-<!--              </div>-->
             </div>
-
-<!--            <div class="row">-->
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.gender.errors }}-->
-<!--                  <label>{{form.gender.label}}:</label>-->
-<!--                  {{ form.gender|add_class:'form-control' }}-->
-<!--              </div>-->
-
-<!--              <div class="col-md-3">-->
-<!--                  <label>{{form.date.label}}:</label>-->
-<!--                  {{ form.date|add_class:'form-control' }}-->
-<!--              </div>-->
-
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.blood_group.errors }}-->
-<!--                  <label>{{form.blood_group.label}}:</label>-->
-<!--                  {{ form.blood_group|add_class:'form-control' }}-->
-<!--              </div>-->
-
-<!--              <div class="col-md-3">-->
-<!--                  {{ form.marital_status.errors }}-->
-<!--                  <label>{{form.marital_status.label}}:</label>-->
-<!--                  {{ form.marital_status|add_class:'form-control' }}-->
-<!--              </div>-->
-<!--            </div>-->
           </div>
         </div>
 
@@ -87,40 +56,14 @@
                       <label>{{ form.body.label }}:</label>
                       {% render_field form.body class="form-control" placeholder=form.body.label %}
                   </div>
+                  <div class="col-md-6 mb-3">
+                      {{ form.picture.errors }}
+                      <label>Blog Image:</label>
+                      {% render_field form.picture class="form-control" placeholder=form.picture.label %}
+                  </div>
               </div>
           </div>
         </div>
-
-<!--        <div class="card" style="margin-top: 20px">-->
-<!--          <div class="card-header"><h5><center>Address Details</center></h5></div>-->
-<!--          <div class="card-body">-->
-<!--            <div class="row">-->
-<!--              <div class="col-xs-6 col-sm-3">-->
-<!--                {{ form.country.errors }}-->
-<!--                <label>{{form.country.label}}:</label>-->
-<!--                {% render_field form.country class="form-control" placeholder=form.country.label %}-->
-<!--              </div>-->
-
-<!--              <div class="col-xs-6 col-sm-3">-->
-<!--                  {{ form.state.errors }}-->
-<!--                  <label>{{form.state.label}}:</label>-->
-<!--                  {% render_field form.state class="form-control" placeholder=form.state.label %}-->
-<!--              </div>-->
-
-<!--              <div class="col-xs-6 col-sm-3">-->
-<!--                  {{ form.district.errors }}-->
-<!--                  <label>{{form.district.label}}:</label>-->
-<!--                  {% render_field form.district class="form-control" placeholder=form.district.label %}-->
-<!--              </div>-->
-
-<!--              <div class="col-xs-6 col-sm-3">-->
-<!--                  {{ form.city.errors }}-->
-<!--                  <label>{{form.city.label}}:</label>-->
-<!--                  {% render_field form.city class="form-control" placeholder=form.city.label %}-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
 
         <div class="form-group" style="margin-top: 20px" >
             <input class="btn btn-primary" type="submit" value="Update">

@@ -253,36 +253,36 @@
                         <div class="sec-title">
                             <h1>Drop a line us</h1>
                         </div>
-                        <form id="contact-form" name="contact_form" class="contact-form" action="http://steelthemes.com/demo/html/Goodsoul_html/inc/sendmail.php" method="post">
+                        <form id="" name="contact_form" class="contact-form">
                             <div class="row clearfix">
                                 <div class="col-lg-6 col-md-6 column">        
                                     <div class="form-group">
-                                        <input type="text" name="form_name" class="form-control" value="" placeholder="Name" required="">
+                                        <input type="text" name="form_name" class="form-control" id="fullname" placeholder="Name" required="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 column">
                                     <div class="form-group">
-                                        <input type="email" name="form_email" class="form-control required email" value="" placeholder="Email" required="">
+                                        <input type="email" name="form_email" class="form-control required email" id="mail" placeholder="Email" required="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 column">        
                                     <div class="form-group">
-                                        <input type="text" name="form_phone" class="form-control" value="" placeholder="Phone" required="">
+                                        <input type="text" name="form_phone" class="form-control" id="phn" placeholder="Phone" required="">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 column">        
                                     <div class="form-group">
-                                        <input type="text" name="form_subject" class="form-control" value="" placeholder="Subject" required="">
+                                        <input type="text" name="form_subject" class="form-control" id="subject" placeholder="Subject" required="">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 column">
                                     <div class="form-group">
-                                        <textarea name="form_message" class="form-control textarea required" placeholder="Message...."></textarea>
+                                        <textarea name="form_message" class="form-control textarea required" id="message" placeholder="Message...."></textarea>
                                     </div>
                                     <div class="form-group flex-box">
                                         <div class="submit-btn">
                                             <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                            <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><span>Send Message</span></button>
+                                            <a class="theme-btn btn-style-one" id="submit" data-loading-text="Please wait..."><span>Send Message</span></a>
                                         </div>
                                         <span class="hint">*Get answers to common questions through our help center.</span>
                                     </div>
@@ -396,7 +396,7 @@
                     <div class="text">Currently we don't have our payment gateway enabled. <br>Our support team will contact you soon.<br>Thank you for your support.</div>
                 </div>
 
-                <form  action="#" class="donate-form default-form">
+                <form class="donate-form default-form">
                     <ul class="chicklet-list clearfix">
                         <li>
                             <input type="radio" id="donate-amount-1" name="donate-amount" />
@@ -500,6 +500,37 @@
                 },
                 error : function (json){
                     console.log("not succeeded");
+                }
+            });
+        });
+        $('#submit').on('click', function (){
+            var name = $('#fullname').val();
+            var email = $('#mail').val();
+            var phone = $('#phn').val();
+            var subject = $('#subject').val();
+            var message = $('#message').val();
+
+            var form2 = new FormData();
+            form2.append("name", name);
+            form2.append("email", email);
+            form2.append("phone", phone);
+            form2.append("subject", subject);
+            form2.append("message", message);
+
+            $.ajax({
+                url : "{% url 'web:contactQuery' %}",
+                method : "POST",
+                timeout : 0,
+                processData: false,
+                mimeType : "multipart/form-data",
+                contentType: false,
+                data : form2,
+                success: function(json){
+                    console.log("posted successfully...");
+                    window.location.replace("{% url 'web:contact' %}");
+                },
+                error : function (json){
+                    console.log("not succeeded!!!");
                 }
             });
         });

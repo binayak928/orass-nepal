@@ -32,6 +32,7 @@ class BlogCreationForm(forms.Form):
     title = forms.CharField(label='Blog Title', required=True)
     category = forms.CharField(label='Blog Category', required=True)
     body = forms.CharField(label='Blog Title', required=True, widget=forms.Textarea)
+    picture = forms.ImageField(label='Blog Image:')
 
 
 class EventCreationForm(forms.Form):
